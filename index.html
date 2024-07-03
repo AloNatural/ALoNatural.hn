@@ -95,7 +95,7 @@
                                         <a href = "#" class = "nav-link text-white nav-active text-nowrap">Inicio</a>
                                     </li>
                                     <li class = "nav-item">
-                                        <a style="color: green;" href = "productos.html" class = "nav-link text-green text-nowrap">suplementos</a>
+                                        <a style="color: green;" href = "/productos.html" class = "nav-link text-green text-nowrap">suplementos</a>
                                     </li>
                                     <style>
                                         .nav-link {
@@ -171,12 +171,12 @@
                       max-width: 1200px; /* Ancho máximo del slider */
                       margin: 0 auto; /* Centrar el slider horizontalmente */
                     }
-                    
+                  
                     .slides {
                       display: flex;
                       transition: transform 0.5s ease-in-out;
                     }
-                    
+                  
                     .slide {
                       min-width: 100%;
                       flex: 1;
@@ -189,14 +189,14 @@
                       border-radius: 1%;
                       border: none;
                     }
-                    
+                  
                     /* Estilos para los indicadores */
                     .slider-dots {
                       display: flex;
                       justify-content: center;
                       margin-top: 10px;
                     }
-                    
+                  
                     .slider-dot {
                       width: 12px;
                       height: 12px;
@@ -205,19 +205,31 @@
                       margin: 0 5px;
                       cursor: pointer;
                     }
-                    
+                  
                     .slider-dot.active {
                       background-color: #335635; /* Color de los puntos activos */
+                    }
+                  
+                    /* Estilos para pantallas móviles */
+                    @media (max-width: 768px) {
+                      .slide {
+                        height: 300px; /* Altura ajustada para pantallas móviles */
+                      }
+                  
+                      .slider-dot {
+                        width: 10px;
+                        height: 10px;
+                      }
                     }
                   </style>
                   </head>
                   <body>
                   
                   <div style="border: none;" class="slider">
-                    <div  class="slides">
-                      <div class="slide" style="background-image: url('assets/images/Tienda/Slider 1.jpeg');"></div>
-                      <div class="slide" style="background-image: url('assets/images/Tienda/Slider 1.jpeg');"></div>
-                      <div class="slide" style="background-image: url('assets/images/Tienda/Slider 1.jpeg');"></div>
+                    <div class="slides">
+                      <div class="slide" style="background-image: url('/assets/images/Tienda/Slider%201.jpeg');"></div>
+                      <div class="slide" style="background-image: url('/assets/images/Tienda/Slider%201.jpeg');"></div>
+                      <div class="slide" style="background-image: url('/assets/images/Tienda/Slider%201.jpeg');"></div>
                     </div>
                   </div>
                   
@@ -256,10 +268,10 @@
                     });
                   
                     setInterval(nextSlide, 3000); // Cambia el slide cada 3 segundos (ajusta según tu preferencia)
-                    
+                  
                     updateSlide(); // Inicia con el primer slide activo
                   </script>
-                        
+                  
                 </div>
             </header><br><br><br>
             <!-- end of header -->
