@@ -67,10 +67,14 @@ body{
 }
 
 button{
-    background-color: transparent;
+    background-color: #417e46;
+    color: white;
     border: none;
     cursor: pointer;
 }
+
+
+
 .page-wrapper{
     overflow: hidden!important;
 }
@@ -462,10 +466,11 @@ button{
 /* footer */
 .footer{
     margin-top: 136.6px;
-    background: linear-gradient(183.41deg, #d4d4d4 -8.57%, #ffffff 82.96%);
+    background-color: #335635;
     padding-top: 11px;
     padding-bottom: 109px;
     position: relative;
+    color: white;
 }
 
 .footer .navbar-brand{
@@ -477,7 +482,7 @@ button{
     color: var(--clr-blue);
 }
 .footer .navbar-brand .brand-text{
-    color: var(--clr-white);
+    color: white;
     margin-top: -100px;
 }
 
@@ -501,17 +506,21 @@ button{
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 24px;
+    color: #ffffff;
 }
 .footer-links li a{
     font-weight: 300;
     font-size: 18px;
+    color: #ffffff;
 }
 .footer-links li a:hover{
     opacity: 0.95;
     text-decoration: underline;
+    color: #ffffff;
 }
 .footer-links li{
     margin-bottom: 10px;
+    color: #ffffff;
 }
 .footer-element-1{
     bottom: 0;
@@ -557,7 +566,7 @@ button{
         height: 100%;
         box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
         z-index: 999;
-        background-color: var(--clr-white);
+        background-color: white;
         padding: 48px 32px 24px;
         transform: translateX(100%);
         transition: var(--transition-default);
@@ -568,7 +577,7 @@ button{
     }
 
     .navbar-box .nav-link{
-        color: var(--clr-black);
+        color: black;
         position: relative;
         padding-bottom: 8px;
     }
