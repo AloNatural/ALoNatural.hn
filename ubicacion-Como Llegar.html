@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alo Natural</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="assets/images/Diseño sin título (12).png" type="image/x-icon">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- custom css -->
+        <link rel = "stylesheet" href = "assets/css/main.css" />
+        <link rel = "stylesheet" href = "assets/css/utilities.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- normalize.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <style>
+            .hero {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 3.9vh;
+                background-color: #325733;
+                color: white;
+                text-align: center;
+                font-size: 11px;
+            }
+        </style>
+        <div class="hero">
+            <h2>Pedidos a Domicilio (9308-545450) 🇭🇳</h2>
+        </div>
+        <div class="page-wrapper">
+            <!-- header -->
+            <header style="margin-top: -35px;" class = "header">
+                <nav class = "navbar">
+                    <div class="container">
+                        <div class="navbar-content d-flex justify-content-between align-items-center">
+                            <div class = "brand-and-toggler d-flex align-items-center justify-content-between">
+                                <img class="responsive-image" src="assets/images/Assets de Diseño/Logotipo.png" alt="Logo Natural">
+                                <button type = "button" class = "d-none navbar-show-btn">
+                                    <i  class = "fas fa-bars"></i>
+                                </button>
+                            </div>
+                            <style> 
+                             /* Estilos base para la imagen */
+                             .responsive-image {
+                             width: 100%;
+                             max-width: 180px; /* Tamaño máximo predeterminado */
+                             height: auto;
+                             display: block;
+                             margin: 0 auto; /* Centra horizontalmente */
+                             }
+
+                            /* Media queries para diferentes tamaños de pantalla */
+                            @media (max-width: 767px) {
+                            .responsive-image {
+                                margin-left: 31%;
+                            max-width: 45%; /* La imagen ocupará todo el ancho disponible en dispositivos móviles */
+                             }
+                            }
+
+                            @media (min-width: 768px) and (max-width: 1023px) {
+                           .responsive-image {
+                            max-width: 50%; /* Ajusta el tamaño máximo para pantallas medianas */
+                            }
+                         }
+                            .icon-container {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 40px;  /* Ajusta el tamaño según tus necesidades */
+                                height: 40px; /* Ajusta el tamaño según tus necesidades */
+                                background-color: #335635;
+                                border-radius: 50%;
+                            }
+                    
+                            .icon-container i {
+                                font-size: 20px;
+                                color: white; /* Cambia el color del icono según tus necesidades */
+                            }
+                         </style>
+                            <div class = "navbar-box">
+                                <button type = "button" class = "navbar-hide-btn">
+                                    <i style="margin-top:-100px; color: white; " class = "fas fa-times"></i>
+                                </button>
+
+                                <ul class = "navbar-nav d-flex align-items-center">
+                                    <li class = "nav-item">
+                                        <a href = "index.html" class = "nav-link text-green text-nowrap">Inicio</a>
+                                    </li>
+                                    <li class = "nav-item">
+                                        <a style="color: green;" href = "/Suplementos.html" class = "nav-link text-green text-nowrap">suplementos</a>
+                                    </li>
+                                    <style>
+                                        .nav-link {
+                                            position: relative;
+                                            color: green;
+                                            text-decoration: none;
+                                        }
+                                    
+                                        .nav-link::after {
+                                            content: '';
+                                            position: absolute;
+                                            bottom: -6px;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 2.1px;
+                                            background-color: transparent;
+                                            transition: background-color 0.3s ease;
+                                        }
+                                    
+                                        .nav-link:hover::after {
+                                            background-color: green;
+                                        }
+                                    </style>
+                                    
+                                    <li class = "nav-item">
+                                        <a style="color: green;" href = "#" class = "nav-link text-white text-nowrap">Promociones</a>
+                                    </li>
+                                    <li class = "nav-item">
+                                        <a style="color: green;" href = "#" class = "nav-link text-white text-nowrap">Acerca </a>
+                                    </li>
+                                    <li class = "nav-item">
+                                        <a style="color: green;" href = "ubicacion-Como Llegar.html" class = "nav-link text-white nav-active text-nowrap">Ubicacion</a>
+                                    </li>
+                                    <li class = "nav-item">
+                                        <a style="color: green;" href = "#" class = "nav-link text-white text-nowrap">Contactanos</a>
+                                    </li>
+                                    
+                                  
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a href="/buscador.html" class="icon-container">
+                                            <i style="font-size: 16px;" class="fa-solid fa-magnifying-glass"></i>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                   
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a href="https://www.instagram.com/alonatural2024/" class="icon-container">
+                                                <i class="fa-solid fa-user"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="element-one">
+                    <img style="width: 140px; margin-top: -160px;" src = "assets/images/Diseño sin título (5)_preview_rev_1.png" alt = "">
+                </div>
+              
+              
+                <style>
+                    /* Estilos para el slider */
+                    .slider {
+                      width: 100%;
+                      overflow: hidden;
+                      position: relative;
+                      max-width: 1200px; /* Ancho máximo del slider */
+                      margin: 0 auto; /* Centrar el slider horizontalmente */
+                    }
+                  
+                    .slides {
+                      display: flex;
+                      transition: transform 0.5s ease-in-out;
+                    }
+                  
+                    .slide {
+                      min-width: 100%;
+                      flex: 1;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      height: 550px; /* Altura fija para los slides */
+                      background-size: cover;
+                      background-position: center;
+                      border-radius: 1%;
+                      border: none;
+                    }
+                  
+                    /* Estilos para los indicadores */
+                    .slider-dots {
+                      display: flex;
+                      justify-content: center;
+                      margin-top: 10px;
+                    }
+                  
+                    .slider-dot {
+                      width: 12px;
+                      height: 12px;
+                      border-radius: 50%;
+                      background-color: #84cc45; /* Color inicial de los puntos */
+                      margin: 0 5px;
+                      cursor: pointer;
+                    }
+                  
+                    .slider-dot.active {
+                      background-color: #335635; /* Color de los puntos activos */
+                    }
+                  
+                    /* Estilos para pantallas móviles */
+                    @media (max-width: 768px) {
+                      .slide {
+                        height: 300px; /* Altura ajustada para pantallas móviles */
+                      }
+                  
+                      .slider-dot {
+                        width: 10px;
+                        height: 10px;
+                      }
+                    }
+                  </style>
+                  
+                  <style>
+                   .map-container {
+    position: relative;
+    width: 600px;
+    height: 450px;
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.location-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 40px; 
+    height: 40px; 
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #325733;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.location-icon img {
+    width: 90%;
+    height: 90%;
+}
+
+@media (max-width: 768px){
+    .map-container{
+        height: 300px;
+        width: 410px;
+
+}
+}
+
+
+
+                  </style>
+                  </head>
+                  <body>
+
+                    <main>
+                        <center>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15378.785990325618!2d-88.02869439999999!3d15.500749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f665b005d80cc41%3A0x41f6eb261899dc91!2sAlo%20Natural!5e0!3m2!1ses!2shn!4v1720297098206!5m2!1ses!2shn" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <div class="location-icon">
+                                    <img src="assets/images/Assets de Diseño/Logo transparente.png" alt="Logo de la Empresa" class="logo">
+                                </div>
+                            </div>
+                        </center>
+                        
+                    </main>
+                  
+            <footer class = "footer">
+                <div class = "container">
+                    <div class = "footer-content">
+                        <div class = "footer-list d-grid text-white">
+                            <div class = "footer-item">
+                              <center><img style="width: 200px;" src="assets/images/Assets de Diseño/Logo circulo.png" alt=""></center>
+                                <p style="color: #fff;" class = "text-white copyright-text">&copy; Alo Natural 2024. Derechos reservados.</p>
+                            </div>
+
+                            <div style="margin-top: 20px;" class = "footer-item">
+                                <h3 class = "footer-item-title">Direccion</h3>
+                                <ul class = "footer-links">
+                                    <li><a href = "#">7 calle Bo el Benque,7y8 ave a la par de Total,cuadro abajo de Leonardo Martinez , San Pedro Sula, Honduras</a></li>
+                                    
+                                </ul>
+                            </div>
+
+                            <div style="margin-top: 20px;" class = "footer-item">
+                                <h3 class = "footer-item-title">Redes Sociales</h3>
+                                <ul class = "footer-links">
+                                    <div class="Redes-icons">
+                                    <i class="fa-brands fa-facebook"></i>
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <i class="fa-brands fa-tiktok"></i>
+                                    <style>
+                                        .Redes-icons {
+                                            display: flex;
+                                            gap: 10px;
+                                        }
+                                        .Redes-icons i {
+                                            color: #335635;
+                                            font-size: 2em; /* Tamaño de los iconos */
+                                            background-color: #ffffff;
+                                            padding: 10px;
+                                            border-radius: 50%; /* Bordes redondeados */
+                                        }
+                                    </style>
+                                </div>
+                                </ul>
+                            </div>
+
+                            <div style="margin-top: 20px;" class = "footer-item">
+                                <h3 class = "footer-item-title">Informacion</h3>
+                                <ul class = "footer-links">
+                                    <li><a href = "#">Politicas de Privacidad</a></li>
+                                    <li><a href = "#">Condiciones</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Icono de WhatsApp flotante -->
+    <a href="https://wa.me/32684168?text=¡Hola!%20Estoy%20interesado%20en%20los%20productos%20de%20Alo%20Natural." target="_blank" class="floating-icon" style=" border-radius: 50%; padding: 10px; position: fixed; bottom: 20px; right: 20px; text-align: center;">
+        <img style="width: 60px;" src="assets/images/Assets de Diseño/Whatsapp Ilustrado.png" alt="">
+    </a>
+
+        <!-- jquery cdn -->
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <!-- owl carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- custom js -->
+        <script src = "assets/js/script.js"></script>
+    </body>
+</html>
