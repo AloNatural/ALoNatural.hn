@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Alo Natural</title>
-        <meta name="description" content="Alo Natural : Alo Natural es una empresa dedicada ala distribuicion de suplementos y medicamentos naturales y populares con el fin, de dar un bienestar ala salud Humana. ">
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="assets/images/Assets de Diseño/Logo-icon.png" type="image/x-icon">
         <!-- font awesome -->
@@ -18,20 +18,71 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <!-- normalize.css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-    <body>
         <style>
-            .hero {
+            .video-container {
                 display: flex;
-                align-items: center;
                 justify-content: center;
-                height: 3.9vh;
-                background-color: #325733;
-                color: white;
-                text-align: center;
-                font-size: 11px;
+                align-items: center;
+                padding: 20px;
+                border: 8px solid #335635;
+                margin: 20px;
+                border-radius: 10px;
+                background-color: #f0f0f0;
+            }
+        
+            video {
+                width: 100%;
+                max-width: 800px;
+                border-radius: 10px;
+                height: auto; /* Ajusta la altura automáticamente */
+            }
+        
+            /* Ajustes para pantallas grandes */
+            @media (min-width: 1024px) {
+                .video-container {
+                    display: none;
+                }
+            }
+
+             /* Mostrar video en pantallas pequeñas y medianas */
+            @media (max-width: 1023px) {
+                 .video-container {
+                     display: flex; /* Mostrar el contenedor de video */
+                }
+            }
+        
+            /* Ajustes para pantallas medianas */
+            @media (min-width: 768px) and (max-width: 1023px) {
+                .video-container {
+                    padding: 20px;
+                    margin: 20px auto;
+                    max-width: 600px; /* Limita el ancho máximo del contenedor en pantallas medianas */
+                }
+        
+                video {
+                    max-width: 100%;
+                    height: auto; /* Mantiene la relación de aspecto */
+                }
+            }
+        
+            /* Ajustes para pantallas pequeñas */
+            @media (max-width: 767px) {
+                .video-container {
+                    padding: 10px;
+                    margin: 10px auto;
+                    max-width: 90%; /* Usa todo el ancho disponible en pantallas pequeñas */
+                }
+        
+                video {
+                    max-width: 100%;
+                    height: 450px; /* Mantiene la relación de aspecto */
+                }
             }
         </style>
+        
+    </head>
+    <body>
+                <!-- Hero-->
         <div class="hero">
             <h2>Pedidos a Domicilio (9308-545450) 🇭🇳</h2>
         </div>
@@ -43,48 +94,13 @@
                         <div class="navbar-content d-flex justify-content-between align-items-center">
                             <div class = "brand-and-toggler d-flex align-items-center justify-content-between">
                                 <img class="responsive-image" src="assets/images/Assets de Diseño/Logotipo.png" alt="Logo Natural">
-                                <button type = "button" class = "d-none navbar-show-btn">
-                                    <i  class = "fas fa-bars"></i>
+                                <button type="button" role="button-bars" class="d-none navbar-show-btn">
+                                    <i style="color: #335635;" class="fa-solid fa-magnifying-glass"></i>
+                                    <i style="color: #335635; font-size: 27px;" class="fas fa-bars"></i>
+                                  
                                 </button>
+
                             </div>
-                            <style> 
-                             /* Estilos base para la imagen */
-                             .responsive-image {
-                             width: 100%;
-                             max-width: 180px; /* Tamaño máximo predeterminado */
-                             height: auto;
-                             display: block;
-                             margin: 0 auto; /* Centra horizontalmente */
-                             }
-
-                            /* Media queries para diferentes tamaños de pantalla */
-                            @media (max-width: 767px) {
-                            .responsive-image {
-                                margin-left: 31%;
-                            max-width: 45%; /* La imagen ocupará todo el ancho disponible en dispositivos móviles */
-                             }
-                            }
-
-                            @media (min-width: 768px) and (max-width: 1023px) {
-                           .responsive-image {
-                            max-width: 50%; /* Ajusta el tamaño máximo para pantallas medianas */
-                            }
-                         }
-                            .icon-container {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                width: 40px;  /* Ajusta el tamaño según tus necesidades */
-                                height: 40px; /* Ajusta el tamaño según tus necesidades */
-                                background-color: #335635;
-                                border-radius: 50%;
-                            }
-                    
-                            .icon-container i {
-                                font-size: 20px;
-                                color: white; /* Cambia el color del icono según tus necesidades */
-                            }
-                         </style>
                             <div class = "navbar-box">
                                 <button type = "button" class = "navbar-hide-btn">
                                     <i style="margin-top:-100px; color: white; " class = "fas fa-times"></i>
@@ -97,41 +113,20 @@
                                     <li class = "nav-item">
                                         <a style="color: green;" href = "productos.html" class = "nav-link text-green text-nowrap">suplementos</a>
                                     </li>
-                                    <style>
-                                        .nav-link {
-                                            position: relative;
-                                            color: green;
-                                            text-decoration: none;
-                                        }
-                                    
-                                        .nav-link::after {
-                                            content: '';
-                                            position: absolute;
-                                            bottom: -6px;
-                                            left: 0;
-                                            width: 100%;
-                                            height: 2.1px;
-                                            background-color: transparent;
-                                            transition: background-color 0.3s ease;
-                                        }
-                                    
-                                        .nav-link:hover::after {
-                                            background-color: green;
-                                        }
-                                    </style>
-                                    
+                
                                     <li class = "nav-item">
                                         <a style="color: green;" href = "#" class = "nav-link text-white text-nowrap">Promociones</a>
                                     </li>
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a style="color: green;" href="#acerca-de-nosotros" class="nav-link text-white text-nowrap">Acerca de Nosotros</a>
+                                        </li>
+                                    </ul>
+                                    
                                     <li class = "nav-item">
-                                        <a style="color: green;" href = "#" class = "nav-link text-white text-nowrap">Acerca </a>
+                                        <a style="color: green;" href="#Contactanos" class = "nav-link text-white text-nowrap">Contactanos</a>
                                     </li>
-                                    <li class = "nav-item">
-                                        <a style="color: green;" href = "ubicacion-Como Llegar.html" class = "nav-link text-white text-nowrap">Ubicacion</a>
-                                    </li>
-                                    <li class = "nav-item">
-                                        <a style="color: green;" href = "#" class = "nav-link text-white text-nowrap">Contactanos</a>
-                                    </li>
+                                                    <!-- Redes Sociales-->
                                     <ul class="nav">
                                         <li class="nav-item">
                                             <a href="buscador.html" class="icon-container">
@@ -159,86 +154,12 @@
                         </div>
                     </div>
                 </nav>
+                <!-- Final del nav-->
 
-                <div class="element-one">
-                    <img style="width: 140px; margin-top: -160px;" src = "assets/images/Diseño sin título (5)_preview_rev_1.png" alt = "">
-                </div>
               
-              
-               <style>
-  /* Estilos para el slider */
-  .slider {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    max-width: 1200px; /* Ancho máximo del slider */
-    margin: 0 auto; /* Centrar el slider horizontalmente */
-  }
-
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .slide {
-    min-width: 100%;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 550px; /* Altura fija para los slides */
-    background-size: cover;
-    background-position: center;
-    border-radius: 1%;
-    border: none;
-  }
-
-  /* Estilos para los indicadores */
-  .slider-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .slider-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #84cc45; /* Color inicial de los puntos */
-    margin: 0 5px;
-    cursor: pointer;
-  }
-
-  .slider-dot.active {
-    background-color: #335635; /* Color de los puntos activos */
-  }
-
-  /* Estilos para pantallas móviles */
-  @media (max-width: 768px) {
-    .slide {
-      height: 300px; /* Altura ajustada para pantallas móviles */
-    }
-
-    .slider-dot {
-      width: 10px;
-      height: 10px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .slide {
-      height: 200px; /* Altura ajustada para pantallas muy pequeñas */
-    }
-
-    .slider-dot {
-      width: 8px;
-      height: 8px;
-    }
-  }
-</style>
                   </head>
                   <body>
-                  
+                                  <!-- Slider-->
                   <div style="border: none;" class="slider">
                     <div class="slides">
                       <div class="slide" style="background-image: url('assets/images/Tienda/Slider%201.jpeg');"></div>
@@ -256,64 +177,59 @@
 		    <span class="slider-dot"></span>
 		    <span class="slider-dot"></span>
                   </div>
-                  
-                  <script>
-                    const slides = document.querySelector('.slides');
-                    const slide = document.querySelectorAll('.slide');
-                    const dots = document.querySelectorAll('.slider-dot');
-                  
-                    let index = 0;
-                    const totalSlides = slide.length;
-                  
-                    function updateSlide() {
-                      slides.style.transform = `translateX(${-index * 100}%)`;
-                  
-                      dots.forEach((dot, i) => {
-                        dot.classList.toggle('active', i === index);
-                      });
-                    }
-                  
-                    function nextSlide() {
-                      index = (index + 1) % totalSlides;
-                      updateSlide();
-                    }
-                  
-                    dots.forEach((dot, i) => {
-                      dot.addEventListener('click', () => {
-                        index = i;
-                        updateSlide();
-                      });
-                    });
-                  
-                    setInterval(nextSlide, 3000); // Cambia el slide cada 3 segundos (ajusta según tu preferencia)
-                  
-                    updateSlide(); // Inicia con el primer slide activo
-                  </script>
-                  
+                <br>
+          <!-- Video -->
+        <div class="video-container">
+            <video id="autoplay-video" controls>
+                <source src="assets/images/Tienda/Local.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
                 </div>
-            </header><br><br><br>
+            </header><br><br>
             <!-- end of header -->
 
             <main>
-                <section class = "sc-grid sc-grid-one">
-                    <div class="container">
-                        <div class = "grid-content d-grid align-items-center">
-                            <div class = "grid-img">
-                                <img style="border-radius: 10px;" src = "assets/images/Assets de Diseño/Logotipo.png" alt = "">
-                            </div>
-                            <div class = "grid-text">
-                                <div class = "content-wrapper text-start">
-                                    <div class = "title-box">
-                                        <h3 style="color: #6daa38;" class = "title-box-name text-white">¿Quienes Somos?</h3>
-                                        <div style="color: green;" class = "title-separator mx-auto"></div>
+                                <!-- Presentacion-->
+                                <section id="acerca-de-nosotros" class="sc-grid sc-grid-one">
+                                    <div class="container">
+                                        <div class="grid-content d-grid align-items-center">
+                                            <div class="grid-img">
+                                                <img style="border-radius: 10px;" src="assets/images/Assets de Diseño/Logotipo.png" alt="">
+                                            </div>
+                                            <div class="grid-text">
+                                                <div class="content-wrapper text-start">
+                                                    <div class="title-box">
+                                                        <h3 style="color: #6daa38;" class="title-box-name text-white">¿Quienes Somos?</h3>
+                                                        <div style="color: green;" class="title-separator mx-auto"></div>
+                                                    </div>
+                                                    <p style="color: rgb(1, 53, 1); font-size: 18px;" class="text title-box-text text-white">Alo Natural es una empresa dedicada ala distribuicion de suplementos y medicamentos naturales y populares con el fin, de dar un bienestar ala salud Humana.</p><br>
+                                                    <p style="font-size: 18px;" class="text title-box-text text-white">Alo Natural es el simbolo de confianza, Calidad, Solidez y Seguridad. <br><br> Alo Natural Una solucion para tu salud.!!</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p style="color: rgb(1, 53, 1); font-size: 18px;" class = "text title-box-text text-white">Alo Natural es una empresa dedicada ala distribuicion de suplementos y medicamentos naturales y populares con el fin, de dar un bienestar ala salud Humana.</p><br>
-                                    <p style="font-size: 18px;" class = "text title-box-text text-white">Alo Natural es el simbolo de confianza, Calidad, Solidez y Seguridad. <br><br> Alo Natural Una solucion para tu salud.!!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                                </section>
+
+                                <style>
+                                    html {
+    scroll-behavior: smooth;
+}
+
+                                </style>
+
+        <script>
+                                   
+document.querySelector('.nav-link[href="#acerca-de-nosotros"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#acerca-de-nosotros').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+                                </script>
+                                
+                                <!-- Vision y Mision-->
                 <section class = "sc-grid sc-grid-two">
                     <div class = "container">
                         <div class = "grid-content d-grid align-items-center">
@@ -323,7 +239,7 @@
                             <div class = "grid-text">
                                 <div class = "content-wrapper text-start">
                                     <div class = "title-box">
-                                        <h3 style="color: #6daa38;;" class = "title-box-name">Vision y Mision</h3>
+                                        <h3 style="color: #6daa38;" class = "title-box-name">Vision y Mision</h3>
                                         <div class = "title-separator mx-auto"></div>
                                     </div>
                                     <p style="font-size: 18px;" class = "text title-box-text text-white">Nuestra vision como empresa es poder llegar a ser lider en nuevas estrategias, nuevos servicios, nuevas innovaciones que hagan un realce de nosotros, en el cuidado y el bienestar de cada persona que nos visite dia a dia y poder brindarles una solucion efectiva para sus necesidades y su salud.</p> <br>
@@ -334,248 +250,106 @@
                     </div>
                 </section>
 
-<style>
-    .top-products {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	margin-bottom: 3rem;
+                                <!-- Galeria-->
+                                <section class="sc-grid sc-grid-one">
+                                    <div class = "title-box">
+                                      <center><h3 style="color: #6daa38;" class = "title-box-name">Galeria</h3></center>
+                                      <div style="color: green;" class = "title-separator mx-auto"></div>
+                                  </div>
+                              <section class="gallery">
+                                  
+                                  <img
+                                      src="assets/images/Tienda/Gallery 1.jpg"
+                                      alt="Gallery Img1"
+                                      class="gallery-img-1"
+                                      onclick="openModal(this)" 
+                                  /><img
+                                      src="assets/images/Tienda/Gallery 2.jpg"
+                                      alt="Gallery Img2"
+                                      class="gallery-img-2"
+                                      onclick="openModal(this)" 
+                                  /><img
+                                      src="assets/images/Tienda/Gallery 3.jpg"
+                                      alt="Gallery Img3"
+                                      class="gallery-img-3"
+                                      onclick="openModal(this)" 
+                                  /><img
+                                      src="assets/images/Tienda/Gallery 4.jpg"
+                                      alt="Gallery Img4"
+                                      class="gallery-img-4"
+                                      onclick="openModal(this)" 
+                                  /><img
+                                      src="assets/images/Tienda/Gallery 5.jpg"
+                                      alt="Gallery Img5"
+                                      class="gallery-img-5"
+                                      onclick="openModal(this)" 
+                                  />
+                                  />
+                              
+                              
+                              </section>
+                              
+                              </section> 
+                                  
+                                  <!-- Modal -->
+                                  <div id="myModal" class="modal">
+                                    <span class="close" onclick="closeModal()">&times;</span>
+                                    <img class="modal-content" id="img01">
+                                  </div>
+
+                                  <style>
+                                    /* Gallery */
+
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #ffffff;
 }
 
-.container-options {
-	display: flex;
-	justify-content: center;
-	gap: 2rem;
-	margin-bottom: 1rem;
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 700px;
 }
 
-.container-options span {
-	color: #777;
-	background-color: #fff;
-	padding: 0.7rem 3rem;
-	font-size: 1.4rem;
-	text-transform: capitalize;
-	border-radius: 2rem;
-	cursor: pointer;
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #000000;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.container-options span:hover {
-	background-color: var(--primary-color);
-	color: #fff;
+                                  </style>
+
+                                  <script>
+                                    function openModal(element) {
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("img01");
+  modal.style.display = "block";
+  modalImg.src = element.src;
 }
 
-.container-options span.active {
-	background-color: var(--primary-color);
-	color: #fff;
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
 }
 
-/* Products */
-.container-products {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-	gap: 3rem;
-}
+                                  </script>
 
-.card-product {
-	background-color: #fff;
-	padding: 2rem 3rem;
-	border-radius: 0.5rem;
-	cursor: pointer;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-}
-
-.container-img {
-	position: relative;
-}
-
-.container-img img {
-	width: 100%;
-}
-
-.container-img .discount {
-	position: absolute;
-	left: 0;
-	background-color: var(--primary-color);
-	color: #fff;
-	padding: 2px 1.2rem;
-	border-radius: 1rem;
-	font-size: 1.2rem;
-}
-
-.card-product:hover .discount {
-	background-color: #000;
-}
-
-.button-group {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-
-	position: absolute;
-	top: 0;
-	right: -3rem;
-	z-index: -1;
-	transition: all 0.4s ease;
-}
-
-.button-group span {
-	border: 1px solid var(--primary-color);
-	padding: 0.8rem;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: all 0.4s ease;
-}
-
-.button-group span:hover {
-	background-color: var(--primary-color);
-}
-
-.button-group span i {
-	font-size: 1.5rem;
-	color: var(--primary-color);
-}
-
-.button-group span:hover i {
-	color: #fff;
-}
-
-.card-product:hover .button-group {
-	z-index: 0;
-	right: -1rem;
-}
-
-.content-card-product {
-	display: grid;
-	justify-items: center;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(4, min-content);
-	row-gap: 1rem;
-}
-
-.stars {
-	grid-row: 1/2;
-	grid-column: 1/-1;
-}
-
-.stars i {
-	font-size: 1.3rem;
-	color: var(--primary-color);
-}
-
-.content-card-product h3 {
-	grid-row: 2/3;
-	grid-column: 1/-1;
-
-	font-weight: 400;
-	font-size: 1.6rem;
-	margin-bottom: 1rem;
-	cursor: pointer;
-}
-
-.content-card-product h3:hover {
-	color: var(--primary-color);
-}
-
-.add-cart {
-	justify-self: start;
-	border: 2px solid var(--primary-color);
-	padding: 1rem;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: all 0.4s ease;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.add-cart:hover {
-	background-color: var(--primary-color);
-}
-
-.add-cart i {
-	font-size: 1.5rem;
-	color: var(--primary-color);
-}
-
-.add-cart:hover i {
-	color: #fff;
-}
-
-.content-card-product .price {
-	justify-self: end;
-	align-self: center;
-
-	font-size: 1.7rem;
-	font-weight: 600;
-}
-
-.content-card-product .price span {
-	font-size: 1.5rem;
-	font-weight: 400;
-	text-decoration: line-through;
-	color: #777;
-	margin-left: 0.5rem;
-}
-</style>
- <style>
-    .gallery {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 30rem);
-	gap: 1.5rem;
-	margin-bottom: 3rem;
-}
-
-.gallery img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.gallery-img-3 {
-	grid-column: 2/4;
-	grid-row: 1/3;
-}
- </style>
- <section class="sc-grid sc-grid-one">
-      <div class = "title-box">
-        <center><h3 class = "title-box-name">Galeria</h3></center>
-        <div style="color: green;" class = "title-separator mx-auto"></div>
-    </div>
-<section class="gallery">
-    
-    <img
-        src="assets/images/Tienda/Gallery 1.jpg"
-        alt="Gallery Img1"
-        class="gallery-img-1"
-    /><img
-        src="assets/images/Tienda/Gallery 2.jpg"
-        alt="Gallery Img2"
-        class="gallery-img-2"
-    /><img
-        src="assets/images/Tienda/Gallery 3.jpg"
-        alt="Gallery Img3"
-        class="gallery-img-3"
-    /><img
-        src="assets/images/Tienda/Gallery 4.jpg"
-        alt="Gallery Img4"
-        class="gallery-img-4"
-    /><img
-        src="assets/images/Tienda/Gallery 5.jpg"
-        alt="Gallery Img5"
-        class="gallery-img-5"
-    />
-    />
-
-
-</section>
-
-</section>
+                                  
                 <section class = "sc-grid sc-grid-two">
                     <div class = "container">
                         <div class = "grid-content d-grid align-items-center">
@@ -587,297 +361,13 @@
                                         <h3 style="color: #6daa38;;" class = "title-box-name">Productos</h3>
                                         <div style="color: #6daa38;" class="title-separator mx-auto"></div>
                            </div>
-
-                                  
-                                   
-                                        
-                                                    
-                                        
-                                                <script
-                                                    src="https://kit.fontawesome.com/81581fb069.js"
-                                                    crossorigin="anonymous"
-                                                ></script>
-
-                                                <style>
-                                                    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-:root {
-	--primary-color: green;
-	--background-color: #f9f5f0;
-	--dark-color: #151515;
-}
-
-html {
-	font-size: 62.5%;
-	font-family: 'Poppins', sans-serif;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-/* ********************************** */
-/*             UTILIDADES             */
-/* ********************************** */
-.container {
-	max-width: 120rem;
-	margin: 0 auto;
-}
-
-
-/* ********************************** */
-/*            TOP PRODUCTS            */
-/* ********************************** */
-.top-products {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-
-        .container-products {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-
-        .card-product {
-            background-color: #fff;
-            padding: 3rem; /* Ajusta el padding para aumentar el tamaño */
-            border-radius: 1rem;
-            cursor: pointer;
-            box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-        }
-
-        .container-img {
-            width: 190px;
-        }
-
-        .container-img img {
-            width: 100%;
-        }
-
-        .button-group {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            position: absolute;
-            top: 0;
-            right: -3rem;
-            z-index: -1;
-            transition: all 0.4s ease;
-        }
-
-        .button-group span {
-            border: 1px solid var(--primary-color);
-            padding: 0.8rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.4s ease;
-        }
-
-        .button-group span:hover {
-            background-color: var(--primary-color);
-        }
-
-        .button-group span i {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .button-group span:hover i {
-            color: #fff;
-        }
-
-        .card-product:hover .button-group {
-            z-index: 0;
-            right: -1rem;
-        }
-
-        .content-card-product {
-            display: grid;
-            justify-items: center;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(4, min-content);
-            row-gap: 1rem;
-        }
-
-        .stars {
-            grid-row: 1/2;
-            grid-column: 1/-1;
-        }
-
-        .stars i {
-            font-size: 1.3rem;
-            color: rgb(223, 223, 3);
-        }
-
-        .content-card-product h3 {
-            grid-row: 2/3;
-            grid-column: 1/-1;
-            font-weight: 400;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            cursor: pointer;
-        }
-
-        .content-card-product h3:hover {
-            color: var(--primary-color);
-        }
-
-        .content-card-product .price {
-            grid-row: 3/4;
-            grid-column: 1/-1;
-            font-size: 1.7rem;
-            font-weight: 600;
-        }
-
-        .content-card-product .price span {
-            font-size: 1.5rem;
-            font-weight: 400;
-            text-decoration: line-through;
-            color: #777;
-            margin-left: 0.5rem;
-        }
-
-/* ********************************** */
-/*       MEDIA QUERIES -- 768px       */
-/* ********************************** */
-@media (max-width: 768px) {
-	
-	.container-options {
-		align-items: center;
-	}
-
-	.container-options span {
-		text-align: center;
-		padding: 1rem 2rem;
-	}
-
-	.container-products {
-		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-	}
-
-}
-
-/* ********************************** */
-/*       MEDIA QUERIES -- 468px       */
-/* ********************************** */
-@media (max-width: 468px) {
-	html {
-		font-size: 42.5%;
-	}
-
-	.content-banner {
-		max-width: 50rem;
-		padding: 22rem 0;
-	}
-
-	.heading-1 {
-		font-size: 2.8rem;
-	}
-
-	.card-feature {
-		flex-direction: column;
-		border-radius: 2rem;
-	}
-
-	.feature-content {
-		align-items: center;
-	}
-
-	.feature-content p {
-		font-size: 1.4rem;
-		text-align: center;
-	}
-
-	.feature-content span {
-		font-size: 1.6rem;
-		text-align: center;
-	}
-
-	.container-options span {
-		font-size: 1.8rem;
-		padding: 1rem 1.5rem;
-		font-weight: 500;
-	}
-
-	.container-products {
-		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-		gap: 1rem;
-	}
-
-	.container-img .discount {
-		font-size: 2rem;
-	}
-
-	.content-card-product h3 {
-		font-size: 2.2rem;
-	}
-
-	.gallery {
-		grid-template-rows: repeat(2, 20rem);
-	}
-
-	.blogs {
-		padding: 2rem;
-	}
-
-	.container-blogs {
-		grid-template-columns: 1fr;
-		height: 75rem;
-	}
-
-	.content-blog h3 {
-		font-size: 2.4rem;
-	}
-
-	.content-blog span {
-		font-size: 1.8rem;
-	}
-
-	.content-blog p {
-		font-size: 2.2rem;
-	}
-
-	.btn-read-more{
-		font-size: 1.8rem;
-	}
-
-	.contact-info ul,
-	.information ul,
-	.my-account ul{
-		display: none;
-	}
-
-	.contact-info {
-		align-items: center;
-	}
-
-	.menu-footer{
-		grid-template-columns: 1fr;
-	}
-
-	.content p{
-		font-size: 1.6rem;
-	}
-}
-
-                                                </style>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-             
+                             <!-- Revistas-->
                 <section class = "sc-grid sc-grid-one">
                     <div class="container">
                         <div class = "grid-content d-grid align-items-center">
@@ -887,13 +377,11 @@ html {
                             <div class = "grid-text">
                                 <div class = "content-wrapper text-start">
                                     <div class = "title-box">
-                                        <h3 class = "title-box-name text-white">Descarga nuestro catalogo</h3>
+                                        <h3 style="color: #6daa38;" class = "title-box-name text-white">Catalogo Online</h3>
                                         <div class = "title-separator mx-auto"></div>
 
                                     </div>
 
-                                    <p style="font-size: 18px;" class = "text title-box-text text-white">en nuestro catalogo online encontraran los productos que ofrecemos y tambien nuestros precios.</p>
-                                    <button style="background-color: #6daa38; color: white; height: 40px; border: #fff;" type = "button" class = "btn btn-white-outline">Ver</button>
                                     <button style="background-color: #6daa38; color: white; height: 40px; border: #fff;" type = "button" class = "btn btn-white-outline">Descargar</button>
                                 </div>
                             </div>
@@ -901,17 +389,18 @@ html {
                     </div>
                 </section>
 
+                                <!-- Contactanos-->
                 <sectio id="Contactanos" class = "sc-feedback">
                     <div class="container">
                         <div class = "feedback-content">
                             <div class = "feedback-element">
                             </div>
                             <div class="feedback-element-2">
-                                <img src = "assets/images/Assets de Diseño/Logo-icon.png">
+                                <img src = "assets/images/Assets de Diseño/Logo-icon.png" alt="">
                             </div>
                             <div class = "title-box text-center">
                                 <div class = "content-wrapper">
-                                    <h3 class = "title-box-name text-white">Contactanos</h3>
+                                    <h3 style="color: #6daa38;" class = "title-box-name text-white">Contactanos</h3>
                                     <div class = "title-separator mx-auto"></div>
                                 </div>
                             </div>
@@ -964,11 +453,7 @@ html {
                                         </div>
                                     </div>
                                     <div class = "item-right">
-                                        <p style="font-size: 18px;" class = "text text-white">lunes, 8 a. m.–5:30 p. m.</p>
-                                        <p style="font-size: 18px;" class = "text text-white">martes, 8 a. m.–5:30 p. m.</p>
-                                        <p style="font-size: 18px;" class = "text text-white">miércoles, 8 a. m.–5:30 p. m.</p>
-                                        <p style="font-size: 18px;" class = "text text-white">jueves, 8 a. m.–5:30 p. m.</p>
-                                        <p style="font-size: 18px;" class = "text text-white">viernes, 8 a. m.–5:30 p. m.</p>
+                                        <p style="font-size: 18px;" class = "text text-white">lunes a viernes, 8 a. m.–5:30 p. m.</p>
                                         <p style="font-size: 18px;" class = "text text-white">sábado, 8 p. m.–12 a. m.</p>
                                         <p style="font-size: 18px;" class = "text text-white">domingo, 12 a. m.–5:30 p. m.</p>
 
@@ -978,14 +463,14 @@ html {
                         </div>
                     </div>
                 </section>
-            </main>
-
+            </main>       
+                     <!-- Footer-->
             <footer class = "footer">
                 <div class = "container">
                     <div class = "footer-content">
                         <div class = "footer-list d-grid text-white">
                             <div class = "footer-item">
-                              <center><img style="width: 200px;" src="assets/images/Assets de Diseño/Logo circulo.png" alt=""></center>
+                              <center><img style="width: 150px;" src="assets/images/Assets de Diseño/Logo circulo.png" alt=""></center>
                                 <p style="color: #fff;" class = "text-white copyright-text">&copy; Alo Natural 2024. Derechos reservados.</p>
                             </div>
 
@@ -1004,19 +489,6 @@ html {
                                     <i class="fa-brands fa-facebook"></i>
                                     <i class="fa-brands fa-instagram"></i>
                                     <i class="fa-brands fa-tiktok"></i>
-                                    <style>
-                                        .Redes-icons {
-                                            display: flex;
-                                            gap: 10px;
-                                        }
-                                        .Redes-icons i {
-                                            color: #335635;
-                                            font-size: 2em; /* Tamaño de los iconos */
-                                            background-color: #ffffff;
-                                            padding: 10px;
-                                            border-radius: 50%; /* Bordes redondeados */
-                                        }
-                                    </style>
                                 </div>
                                 </ul>
                             </div>
@@ -1035,7 +507,7 @@ html {
         </div>
 
         <!-- Icono de WhatsApp flotante -->
-    <a href="https://wa.me/9308-5450?text=¡Hola!%20Estoy%20interesado%20en%20los%20productos%20de%20Alo%20Natural." target="_blank" class="floating-icon" style=" border-radius: 50%; padding: 10px; position: fixed; bottom: 20px; right: 20px; text-align: center;">
+    <a href="https://wa.me/93085450?text=¡Hola!%20Estoy%20interesado%20en%20los%20productos%20de%20Alo%20Natural." target="_blank" class="floating-icon" style=" border-radius: 50%; padding: 10px; position: fixed; bottom: 20px; right: 20px; text-align: center;">
         <img style="width: 60px;" src="assets/images/Assets de Diseño/Whatsapp Ilustrado.png" alt="">
     </a>
 
@@ -1045,5 +517,30 @@ html {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- custom js -->
         <script src = "assets/js/script.js"></script>
+        
+        <script
+        src="https://kit.fontawesome.com/81581fb069.js"
+        crossorigin="anonymous"
+    ></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById("autoplay-video");
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(video);
+        });
+    </script>
+
     </body>
 </html>
