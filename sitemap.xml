@@ -5,18 +5,5 @@
         <lastmod>2024-07-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://alonatural.github.io/ALoNatural.hn/productos.html</loc>
-        <lastmod>2024-07-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://alonatural.github.io/ALoNatural.hn/ubicacion-Como%20Llegar.html</loc>
-        <lastmod>2024-07-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
+    </url> 
 </urlset>
