@@ -1,0 +1,149 @@
+/* Estilos globales de Productos */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Definir tamaño de fuente base */
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.9vh;
+    background-color: #325733;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* Estilos para la navegación */
+.nav {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 100px;
+    margin: 0;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+/* Estilos para los íconos */
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.icon-container i {
+    font-size: 20px;
+    color: white;
+}
+
+/* Estilos para el contenedor principal */
+.crud-container {
+    width: 80%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto; /* Opcional: agrega un borde para que el contenedor se destaque */
+}
+
+/* Estilos para la tabla de productos */
+.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.crud-table th,
+.crud-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.crud-table th {
+    background-color: #335635;
+    color: white;
+}
+
+.crud-table img {
+    max-width: 50px;
+    height: auto;
+}
+
+/* Estilos para el formulario */
+.crud-form {
+    margin-bottom: 30px;
+}
+
+.crud-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.crud-form input[type="text"],
+.crud-form input[type="number"],
+.crud-form textarea,
+.crud-form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Combobox */
+.crud-form select {
+    width: 100%;
+}
+
+/* Estilos para los botones */
+.btn {
+    padding: 10px 20px;
+    background-color: #335635;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 3px 0;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2c4b2e;
+}
+
+.btn-edit {
+    background-color: #f0ad4e;
+}
+
+.btn-delete {
+    background-color: #d9534f;
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+    .crud-table {
+        font-size: 0.9rem;
+    }
+}
