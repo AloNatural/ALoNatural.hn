@@ -1,5 +1,4 @@
 
-
 $(document).ready(function(){
     $('.feedback-slider').owlCarousel({
         loop: false,
@@ -28,3 +27,36 @@ $(document).ready(function(){
         $('.navbar-box').removeClass("navbar-box-show");
     })
 });
+
+
+// Slider
+const slides = document.querySelector('.slides');
+const slide = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.slider-dot');
+
+let index = 0;
+const totalSlides = slide.length;
+
+function updateSlide() {
+  slides.style.transform = `translateX(${-index * 100}%)`;
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+function nextSlide() {
+  index = (index + 1) % totalSlides;
+  updateSlide();
+}
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    index = i;
+    updateSlide();
+  });
+});
+
+setInterval(nextSlide, 3000); // Cambia el slide cada 3 segundos (ajusta según tu preferencia)
+
+updateSlide(); // Inicia con el primer slide activo
