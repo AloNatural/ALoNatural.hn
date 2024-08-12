@@ -124,7 +124,6 @@
                             </div>
                         </div>
                     </div>
-                </nav>
 
               
 <style>
@@ -313,6 +312,31 @@
 	margin-left: 0.5rem;
 }
 </style>
+
+<style>
+    /* Ajustes del menú desplegable */
+.product-filter {
+    width: 100%; /* Ajusta según tu diseño */
+    max-width: 300px; /* Puedes cambiarlo al tamaño que mejor se ajuste a tu diseño */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+    appearance: none; /* Esto es opcional si quieres personalizar más el dropdown */
+    text-align-last: center;
+}
+
+/* Opcional: Añadir un icono de flecha personalizado */
+.product-filter {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzAwMDAwMCI+PHBhdGggZD0iTTEgMWwwIDdoMmw4LTdNOC41LjVsNyA3aC0xNEw4LjUgLjV6Ii8+PC9zdmc+');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+
+</style>
 <section class="sc-grid sc-grid-two">
     <div class="container">
         <div class="grid-content d-grid align-items-center">
@@ -327,26 +351,62 @@
                     </div>
 
                     <section class="container top-products">
-                        <br><br>
-                        <div class="filter-container">
+                        <div class="filter-search-container">
                             <select class="product-filter" id="productFilter">
-                                <option value="" disabled selected>Seleccione una categoría</option>
-                                <option value="Americanos">Sistema Oseo</option>
-                                <option value="Puritans">Sistema Cerebro Vascular</option>
-                                <option value="Reibot">Sistema Digestivo</option>
-                                <option value="Sistema Digestivo">Sistema Reproductor Masculino</option>
-                                <option value="Sistema Óseo">Sistema Óseo</option>
-                                <option value="Sistema Reproductor Masculino">Sistema Reproductor Masculino</option>
-                                <option value="Sistema Reproductor Femenino">Sistema Reproductor Femenino</option>
-                                <option value="Sistema Urinario">Sistema Urinario</option>
-                                <option value="Sistema Cerebro Vascular">Sistema Cerebro Vascular</option>
-                            </select>
+                            <option value="" disabled selected>Seleccione una categoría</option>
+                            <option value="Nervioso">Sistema Nervioso</option>
+                            <option value="Cerebro_Vacular">Sistema Cerebro Vascular</option>
+                            <option value="Digestivo">Sistema Digestivo</option>
+                            <option value="Oseo">Sistema Óseo</option>
+                            <option value="ReproductorM">Sistema Reproductor Masculino</option>
+                            <option value="ReproductorF">Sistema Reproductor Femenino</option>
+                            <option value="Urinario">Sistema Urinario</option>
+                            <option value="Cerebro_Vascular">Cerebro Vascular</option>
+                            <option value="Bajar_Peso">Bajar de Peso</option>
+                            <option value="Vitaminas">Vitaminas</option>
+                            <option value="Respiratorio">Sistema Respiratorio</option>
+                           </select>
                         </div>
+                       
+                        <!-- Campo de búsqueda -->
+                    <input type="text" id="searchInput" placeholder="Buscar productos..." onkeyup="searchProducts()">
+                    <style>
+                        /* Estilos personalizados para el campo de búsqueda */
 
-                        <div class="search-container">
-                            <input type="text" id="productSearch" placeholder="Buscar producto...">
-                        </div>
+    .product-filter,
+#searchInput {
+    width: 100%; /* Asegura que ambos elementos ocupen el 100% del contenedor padre */
+    max-width: 400px; /* Asegura que ambos elementos tengan el mismo ancho máximo */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #335635; /* Asegúrate de que ambos elementos tengan el mismo borde */
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total del elemento */
+    color: #333; /* Asegura que ambos elementos tengan el mismo color de texto */
+}
 
+.product-filter:focus,
+#searchInput:focus {
+    border-color: #74c69d; /* Asegura que ambos elementos tengan el mismo color de borde al hacer foco */
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5); /* Sombra ligera al enfocar */
+}
+
+.product-filter {
+    background-color: #f8f8f8;
+    text-align-last: center;
+    appearance: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzAwMDAwMCI+PHBhdGggZD0iTTEgMWwwIDdoMmw4LTdNOC41LjVsNyA3aC0xNEw4LjUgLjV6Ii8+PC9zdmc+');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+
+#searchInput {
+    background-color: #fff;
+}
+                    </style>
+
+                    
                         <div class="container-products">
                             <!-- Aquí se encontrarán los productos filtrados -->
                         </div>
@@ -589,19 +649,14 @@
 </style>
 
       </div>
-</div>
-</div>
-</div>
-     </section>
-
-<main>
-    <!-- Main content goes here -->
-</main>
-
+       </div>
+         </div>
+          </div>
+           </section>
 
 <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
 
-<script src="assets/js/app.js"></script>
+<script src="./assets/js/app.js"></script>
 
 <!-- jQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
