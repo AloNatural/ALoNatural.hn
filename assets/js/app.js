@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const productFilter = document.getElementById("productFilter");
     const productsContainer = document.querySelector(".container-products");
@@ -18,20 +19,63 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getProductosPorCategoria(category) {
         switch (category) {
-            case "Americanos":
+            case "Nervioso":
                 return [
-                    { name: "Artricalm", price: "L.280.00", image: "https://naturcol.com/wp-content/uploads/2020/02/COLAGENO-x-100.jpg" },
-                    { name: "Artricalm", price: "L.280.00", image: "https://naturcol.com/wp-content/uploads/2020/02/COLAGENO-x-100.jpg" },
-                    { name: "Artricalm", price: "L.280.00", image: "https://naturcol.com/wp-content/uploads/2020/02/COLAGENO-x-100.jpg" },
+                    { name: "St. John's 500 mg | 60 cápsulas", price: "L.167.00", image: "https://d2j6dbq0eux0bg.cloudfront.net/images/51112176/4470591320.png" },
+                    { name: "Melatonina 10 mg", price: "L.440.00", image: "https://d2j6dbq0eux0bg.cloudfront.net/images/51112176/2194742318.jpg" },
+                    { name: "Melatonina 5 Mg x 120 Tabletas", price: "L.520.00", image: "https://d2j6dbq0eux0bg.cloudfront.net/images/51112176/3925333934.jpg"},
+                    { name: "5-HTP 100 mg (Griffonia Simplicifolia)", price: "L.0.00", image: "https://www.puritan.com/VF/puritanspride/product_images/shopping_cart/005315.jpg" },
+                    { name: "Concentrix 60 cápsulas", price: "L.438.00", image: "https://d2j6dbq0eux0bg.cloudfront.net/images/51112176/4477535662.jpg"},
                     { name: "Artricalm", price: "L.280.00", image: "https://naturcol.com/wp-content/uploads/2020/02/COLAGENO-x-100.jpg"},
-                    { name: "Artricalm", price: "L.280.00", image: "https://naturcol.com/wp-content/uploads/2020/02/COLAGENO-x-100.jpg"},
-                    
-                    
                 ];
             case "Puritans":
                 return [
                    { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png" },
                    { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
+                   
                    
                    ];
 
@@ -41,7 +85,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     { name:"", price:"", image:""},
                     { name:"", price:"", image:""},
                 ]
-            // Agrega más categorías aquí
+
+            case "Sistema Reproductor Masculino":
+                return[
+                    {name: "Puritans", price:"", image: ""},
+                    {name: "", price: "", image: ""},
+                ]
+
             default:
                 return [];
         }
@@ -51,31 +101,32 @@ document.addEventListener("DOMContentLoaded", function () {
         const card = document.createElement("div");
         card.className = "product-card";
         card.innerHTML = `
-            <div class="container-img">
-                <center>
-                    <img style="width: 250px;" src="${product.image}" alt="${product.name}">
-                </center>
-                <div class="button-group">
-                    <span>
-                        <i class="fa-regular fa-eye"></i>
-                    </span>
-                    <span>
-                        <i class="fa-regular fa-heart"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="content-card-product">
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <h3>${product.name}</h3>
-                <p class="price">${product.price}</p>
-            </div>
-        `;
+    <div class="container-img">
+        <center>
+            <img style="width: 250px; height: 250px; object-fit: cover;" src="${product.image}" alt="${product.name}">
+        </center>
+        <div class="button-group">
+            <span>
+                <i class="fa-regular fa-eye"></i>
+            </span>
+            <span>
+                <i class="fa-regular fa-heart"></i>
+            </span>
+        </div>
+    </div>
+    <div class="content-card-product">
+        <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <h3>${product.name}</h3>
+        <p class="price">${product.price}</p>
+    </div>
+`;
+
         return card;
     }
 });
