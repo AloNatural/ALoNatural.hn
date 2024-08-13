@@ -1102,8 +1102,7 @@ html {
                 </div>
             </footer>
         </div>
-
-        <!-- Icono de WhatsApp flotante -->
+     <!-- Icono de WhatsApp flotante -->
     <a href="https://wa.me/93085450?text=¡Hola!%20Estoy%20interesado%20en%20los%20productos%20de%20Alo%20Natural." target="_blank" class="floating-icon" style=" border-radius: 50%; padding: 10px; position: fixed; bottom: 20px; right: 20px; text-align: center;">
         <img style="width: 60px;" src="assets/images/Assets de Diseño/Whatsapp Ilustrado.png" alt="">
     </a>
@@ -1114,24 +1113,30 @@ html {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- custom js -->
         <script src = "assets/js/script.js"></script>
+        
+        <script
+        src="https://kit.fontawesome.com/81581fb069.js"
+        crossorigin="anonymous"
+    ></script>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var video = document.getElementById("autoplay-video");
-    
-                var observer = new IntersectionObserver(function(entries) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            video.play();
-                        } else {
-                            video.pause();
-                        }
-                    });
-                }, { threshold: 0.5 });
-    
-                observer.observe(video);
-            });
-        </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById("autoplay-video");
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(video);
+        });
+    </script>
 
     </body>
 </html>
