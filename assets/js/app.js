@@ -21,12 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (category) {
             case "Nervioso":
                 return [
-                    { name: "St. John's 500 mg | 60 cápsulas", price: "L.167.00", image: "https://d2j6dbq0eux0bg.cloudfront.net/images/51112176/4470591320.png" },
-                    { name: "Melatonina 10 mg", price: "L.440.00", image: "https://d2j6dbq0eux0bg.cloudfront.net/images/51112176/2194742318.jpg" },
-                    { name: "Melatonina 5 Mg x 120 Tabletas", price: "L.520.00", image: "https://d2j6dbq0eux0bg.cloudfront.net/images/51112176/3925333934.jpg"},
-                    { name: "5-HTP 100 mg (Griffonia Simplicifolia)", price: "L.0.00", image: "https://www.puritan.com/VF/puritanspride/product_images/shopping_cart/005315.jpg" },
-                    { name: "Concentrix 60 cápsulas", price: "L.438.00", image: "https://d2j6dbq0eux0bg.cloudfront.net/images/51112176/4477535662.jpg"},
-                    { name: "Artricalm", price: "L.280.00", image: "https://naturcol.com/wp-content/uploads/2020/02/COLAGENO-x-100.jpg"},
+                    { name: "St. John's 500 mg | 60 cápsulas", price: "L.167.00", image: "assets/images/Tienda/ST_J.png" },
+                    { name: "Melatonina 10 mg", price: "L.440.00", image: "assets/images/Tienda/MelaToNi5MG.png" },
+                    { name: "Melatonina 5 Mg x 120 Tabletas", price: "L.520.00", image: "assets/images/Tienda/MelaToNi-1mg.png"},
+                    { name: "5-HTP 100 mg (Griffonia Simplicifolia)", price: "L.0.00", image: "assets/images/Tienda/5-HTP.png" },
+                    { name: "Concentrix 60 cápsulas", price: "L.438.00", image: "assets/images/Tienda/ConceX.png"},
+                    { name: "Memorix", price: "L.0.00", image: "assets/images/Tienda/MemoX.png"},
+                    { name: "SUMET GEL CAPS", price: "L.0.00", image: "assets/images/Tienda/SuMetC.png"},
+                    { name: "ADP-Caps", price: "L.0.00", image: "assets/images/Tienda/ADP-C.png"},
+
                 ];
             case "Puritans":
                 return [
