@@ -29,68 +29,34 @@ document.addEventListener("DOMContentLoaded", function () {
                     { name: "Memorix", price: "L.0.00", image: "assets/images/Tienda/MemoX.png"},
                     { name: "SUMET GEL CAPS", price: "L.0.00", image: "assets/images/Tienda/SuMetC.png"},
                     { name: "ADP-Caps", price: "L.0.00", image: "assets/images/Tienda/ADP-C.png"},
-
                 ];
-            case "Puritans":
+            case "Cerebro_Vacular":
                 return [
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png" },
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   { name: "Puritans", price: "L.280.00", image: "https://alonatural.github.io/AloNatural/public/assets/img/Puritans%2060%20caps.png"} ,
-                   
-                   
+                   { name: "Equaline Vitamin B-6", price: "L.0.00", image: "assets/images/Tienda/Equ4l7ne.png" },
+                   { name: "Nervodatil 60 cápsulas", price: "L198.00", image: "assets/images/Tienda/N3rv0datil.png"} ,
+                   { name: "Tilovit", price: "L100.00", image: "assets/images/Tienda/T1lovit.png"} ,
+                   { name: "Damianil", price: "L198.00", image: "assets/images/Tienda/D4m1an1il.png"} ,
+                   { name: "Ginseng Vit", price: "L187.00", image: "assets/images/Tienda/G1ns3t_V1t.png"} ,
+                   { name: "Ginseng + Ginkgo Biloba", price: "L197.00", image: "assets/images/Tienda/G1nseng+.png"} ,
+                   { name: "Ginkgo Vit", price: "L182.00", image: "assets/images/Tienda/G1nk0V1t.png"} ,
+                   { name: "Triple Oxigenador Cerebral", price: "L450.00", image: "assets/images/Tienda/Tripple0Xig3nad0or.png"} ,
                    ];
 
-            case "Sistema Digestivo":
+            case "Digestivo":
                 return [
                     { name:"", price:"", image:""},
                     { name:"", price:"", image:""},
                     { name:"", price:"", image:""},
                 ]
 
-            case "Sistema Reproductor Masculino":
+            case "Oseo":
                 return[
+                    {name: "Puritans", price:"", image: ""},
+                    {name: "", price: "", image: ""},
+                ]
+
+            case "ReproductorM":
+                return [
                     {name: "Puritans", price:"", image: ""},
                     {name: "", price: "", image: ""},
                 ]
