@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             case "Digestivo":
                 return [
-                    { name:"", price:"", image:""},
+                    { name:"A-BelX", price:"", image:""},
                     { name:"", price:"", image:""},
                     { name:"", price:"", image:""},
                 ]
