@@ -44,9 +44,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
             case "Digestivo":
                 return [
-                    { name:"A-BelX", price:"", image:""},
+                    { name:"A-Belx Desparasitante", price:"L200.00", image:"assets/images/Tienda/A-B37X.png"},
+                    { name:"Estreñisen", price:"L247.00", image:"assets/images/Tienda/3str3ñis3n.png"},
                     { name:"", price:"", image:""},
                     { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+                    { name:"", price:"", image:""},
+
                 ]
 
             case "Oseo":
