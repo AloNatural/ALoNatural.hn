@@ -76,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             case "Oseo":
                 return[
-                    {name: "Puritans", price:"", image: ""},
-                    {name: "", price: "", image: ""},
+                    {name: "Artricalm 15 Cap", price:"L418.00", image: "assets/images/Tienda/4rtr7ca4lm 15 cap.png"},
+                    {name: "Dolox Suplemento Alimenticio", price: "L250.00", image: "assets/images/Tienda/D0l0x Suplemento.png"},
                 ]
 
             case "ReproductorM":
