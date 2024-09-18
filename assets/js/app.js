@@ -83,10 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     {name: "Calcio Magnesium Zinc 60 caps.", price:"L0.00", image:"assets/images/Tienda/C47c7o_M4gn3s7um_Z7nc.png"},
                     {name: "K-Citmag Magnesio Citrate 60 caps", price:"L0.00", image:"assets/images/Tienda/K-M4gn3s7o.png"},
                     {name: "Flexi-Calm 120 Caps", price:"L0.00", image:"assets/images/Tienda/Fl3x7_C47m.png"},
-                    {name: ""},
-                    {name: ""},
-                    {name: ""},
-                    {name: ""}
+                    {name: "Shark Cartilage Collage 60 caps", price:"L0.00", image:"assets/images/Tienda/Sh4rk_C4rt774g3_C077473N.png"},
+                    {name: "Shar Cartigale 60 caps", price:"L0.00", image:"assets/images/Tienda/Sh4rlkC4.png"},
+                    {name: "Dolox Crema", price:"L0.00", image:"assets/images/Tienda/D070x_F0rt3.png"},
+                    {name: "Dolox 60 caps", price:"L0.00", image:"assets/images/Tienda/Dolox_caps.png"}
                 ]
 
             case "ReproductorM":
