@@ -77,13 +77,22 @@ document.addEventListener("DOMContentLoaded", function () {
             case "Oseo":
                 return[
                     {name: "Artricalm 15 Cap", price:"L418.00", image: "assets/images/Tienda/4rtr7ca4lm 15 cap.png"},
-                    {name: "Dolox Suplemento Alimenticio", price: "L250.00", image: "assets/images/Tienda/D0l0x Suplemento.png"},
+                    {name: "Dolox Suplemento Alimenticio Capsulas", price: "L250.00", image: "assets/images/Tienda/D0l0x Suplemento.png"},
+                    {name: "Dolox Suplemento Alimenticio Bebible", price: "L0.00", image:"assets/images/Tienda/Dolox B3b7b73s.png"},
+                    {name: "Potassium Citrate 100 Tabletas", price:"L0.00", image:"assets/images/Tienda/P0t4ss7um_C7tr4t3.png"},
+                    {name: "Calcio Magnesium Zinc 60 caps.", price:"L0.00", image:"assets/images/Tienda/C47c7o_M4gn3s7um_Z7nc.png"},
+                    {name: ""}
                 ]
 
             case "ReproductorM":
                 return [
                     {name: "Puritans", price:"", image: ""},
                     {name: "", price: "", image: ""},
+                ]
+
+            case "ReproductorF":
+                return[
+                    {name:""}
                 ]
 
             default:
