@@ -87,12 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     {name: "Shar Cartigale 60 caps", price:"L0.00", image:"assets/images/Tienda/Sh4rlkC4.png"},
                     {name: "Dolox Crema", price:"L0.00", image:"assets/images/Tienda/D070x_F0rt3.png"},
                     {name: "Dolox 60 caps", price:"L0.00", image:"assets/images/Tienda/Dolox_caps.png"},
-                    {name:""},
-                    {name: ""},
-                    {name: ""},
-                    {name: ""},
-                    {name: ""},
-                    {name: ""}
+                    {name: "Dolox 30 caps", price:"L0.00", image:"assets/images/Tienda/D070x_30Caps.png"},
+                    {name: "Super Artricalma Crema", price:"L0.00", image:"assets/images/Tienda/Sup3r_4rtr7c47m4_cr3m4.png"},
+                    {name: "Dolox Jarabe 120 ML", price:"L0.00", image:"assets/images/Tienda/D070x_J4R4BE3_120ML.png"},
+                    {name: "Artricalm 60 caps", price:"L0.00", image:"assets/images/Tienda/4rtr7c4lm_60caps.png"},
+                    {name: "Artricalm 30 caps", price:"L0.00", image:"assets/images/Tienda/4rtr7c4lm_30caps.png"},
                 ]
 
             case "ReproductorM":
