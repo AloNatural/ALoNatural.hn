@@ -101,7 +101,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     {name: "Sexi-Forte Vegetal 60 caps", price:"L0.00", image:"assets/images/Tienda/s3x7_f0rt3_60caps.png"},
                     {name: "Pumpkin", price:"L0.00", image:"assets/images/Tienda/Pumpk7n_60caps.png"},
                     {name: "z-40 50 caps", price:"L0.00", image:"assets/images/Tienda/Z-40_50caps.png"},
-                    {name: ""}
+                    {name: "Ortiga 60 caps", price:"L0.00", image:"assets/images/Tienda/0rt7g4_60caps.png"},
+                    {name: "Maca Dorada 60 caps", price:"L0.00", image:"assets/images/Tienda/M4c4_D0r4d4_60caps.png"},
+                    {name: "Prosta Hercules 50 caps", price:"L0.00", image:"assets/images/Tienda/Pr0st4_H3rcul3s_50caps.png"},
+                    {name: "Maca Real 60 Tabs", price:"L0.00", image:"assets/images/Tienda/M4c4_r34l_60tabs.png"},
+                    {name: "VitaFer-l", price:"L0.00", image:"assets/images/Tienda/V7t4f3r-L.png"},
                 ]
 
             case "ReproductorF":
