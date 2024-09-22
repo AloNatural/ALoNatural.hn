@@ -110,7 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             case "ReproductorF":
                 return[
-                    {name:""}
+                    {name:""},
+                    {name:""},
                 ]
 
             default:
