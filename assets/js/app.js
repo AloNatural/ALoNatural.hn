@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
             case "ReproductorM":
                 return [
                     {name: "Saw Palmetto 60 caps", price:"L0.00", image: "assets/images/Tienda/S4w_p47m3tt0_60caps.png"},
-                    {name: "Maca", price: "L0.00", image: "assets/images/Tienda/S4w_p47m3tt0_60caps.png"},
+                    {name: "Maca", price: "L0.00", image: "assets/images/Tienda/M4c4_80caps.png"},
                     {name: "Sexi-Forte Vegetal 60 caps", price:"L0.00", image:"assets/images/Tienda/s3x7_f0rt3_60caps.png"},
                     {name: "Pumpkin", price:"L0.00", image:"assets/images/Tienda/Pumpk7n_60caps.png"},
                     {name: "z-40 50 caps", price:"L0.00", image:"assets/images/Tienda/Z-40_50caps.png"},
