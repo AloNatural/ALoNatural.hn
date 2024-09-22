@@ -112,6 +112,36 @@ document.addEventListener("DOMContentLoaded", function () {
                 return[
                     {name:""},
                     {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                ]
+
+            case "Urinario":
+                return[
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                ]
+
+            case "Bajar_Peso":
+                return[
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
+                    {name:""},
                 ]
 
             default:
