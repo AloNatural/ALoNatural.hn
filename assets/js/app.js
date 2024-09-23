@@ -110,14 +110,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             case "ReproductorF":
                 return[
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
+                    {name:"Evening Primrose Oil 100 caps", price:"L0.00", image:"assets/images/Tienda/3v3n7ng_Pr7m3r0s_07l.png"},
+                    {name:"Gynefem (Jabon Intimos)", price:"L0.00", image:"assets/images/Tienda/G7n3f3m.png"},
+                    {name:"Graviola 60 caps", price:"L0.00", image:"assets/images/Tienda/Gr4v70l4 60 caps.png"},
+                    {name:"Vaginox Crema 50ml", price:"L0.00", image:"assets/images/Tienda/V4g7n0x_cr3m4.png"},
+                    {name:"Ovaril 60 caps", price:"L0.00", image:"assets/images/Tienda/Ov4r7l_60 caps.png"},
+                    {name:"Nutribalance Control Hormonal 90 caps", price:"L0.00", image:"assets/images/Tienda/Nutr7b4l4nc3.png"},
+                    {name:"Citostac Jarabe Natural", price:"L0.00", image:"assets/images/Tienda/C7t0st4c_J4r4b3_N4tur47.png"},
+                    {name:"Graviola 100 caps", price:"", image:"assets/images/Tienda/Gr4v70l4_100caps.png"},
                 ]
 
             case "Urinario":
