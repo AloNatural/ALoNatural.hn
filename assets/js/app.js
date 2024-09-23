@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     {name:"Ovaril 60 caps", price:"L0.00", image:"assets/images/Tienda/Ov4r7l_60 caps.png"},
                     {name:"Nutribalance Control Hormonal 90 caps", price:"L0.00", image:"assets/images/Tienda/Nutr7b4l4nc3.png"},
                     {name:"Citostac Jarabe Natural", price:"L0.00", image:"assets/images/Tienda/C7t0st4c_J4r4b3_N4tur47.png"},
-                    {name:"Graviola 100 caps", price:"", image:"assets/images/Tienda/Gr4v70l4_100caps.png"},
+                    {name:"Graviola 100 caps", price:"L0.00", image:"assets/images/Tienda/Gr4v70l4_100caps.png"},
                 ]
 
             case "Urinario":
