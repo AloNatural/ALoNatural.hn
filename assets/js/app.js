@@ -134,14 +134,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             case "Bajar_Peso":
                 return[
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
+                    {name:"St. Jhons 60 caps", price:"L0.00", image:"assets/images/Tienda/St.Jh0ns_60c4ps.png"},
+                    {name:"Melatonina 60 caps", price:"L0.00", image:"assets/images/Tienda/M3l4t0n7n_60c4ps.png"},
+                    {name:"Melatonina 120 caps", price:"L0.00", image:"assets/images/Tienda/M3l4t0nin_120caps.png"},
+                    {name:"5-HTP 60 caps", price:"L0.00", image:"assets/images/Tienda/5-HTP_60caps.png"},
+                    {name:"Concentrix 60 caps", price:"L0.00", image:"assets/images/Tienda/C0nc3ntrix_60caps.png"},
+                    {name:"Memorix 60 caps", price:"L0.00", image:"assets/images/Tienda/M3m0r7x_60caps.png"},
+                    {name:"Summet Gel 10 Caps", price:"L0.00", image:"assets/images/Tienda/Summ3t_G3l_10c4ps.png"},
+                    {name:"ADP 30 caps", price:"L0.00", image:"assets/images/Tienda/ADP.png"},
                 ]
 
             default:
