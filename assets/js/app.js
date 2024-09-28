@@ -122,14 +122,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             case "Urinario":
                 return[
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
-                    {name:""},
+                    {name:"Urovit", price:"L0.00", image:"assets/images/Tienda/Ur0v7t.png"},
+                    {name:"Colacvit", price:"L0.00", image:"assets/images/Tienda/C0l4cv7t.png"},
+                    {name:"RiñoVit", price:"L0.00", image:"assets/images/Tienda/R7ñ0v7t.png"},
+                    {name:"Calaguala", price:"L0.00", image:"assets/images/Tienda/C4lgu474.png"},
+                    {name:"Quiebre Piedra", price:"L0.00", image:"assets/images/Tienda/Qu73br4_P73dr4.png"},
+                    {name:"Pañiloyan", price:"L0.00", image:"assets/images/Tienda/P4ñil0y4n.png"},
+                    {name:"Cramberry 60 caps", price:"L0.00", image:"assets/images/Tienda/Cr4nberry_60c4ps.png"},
+                    {name:"Té Kalusuanga", price:"L0.00", image:"assets/images/Tienda/T3_K4lusu4ng4.png"},
                 ]
 
             case "Bajar_Peso":
