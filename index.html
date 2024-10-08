@@ -1116,11 +1116,23 @@ html {
         <!-- custom js -->
         <script src = "assets/js/script.js"></script>
         
-        <script
-        src="https://kit.fontawesome.com/81581fb069.js"
-        crossorigin="anonymous"
-    ></script>
+        <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.navbar-show-btn');
+            const closeBtn = document.querySelector('.navbar-hide-btn');
+            const navbar = document.querySelector('.navbar-box');
+        
+            menuBtn.addEventListener('click', function() {
+                navbar.classList.add('show-navbar');
+            });
+        
+            closeBtn.addEventListener('click', function() {
+                navbar.classList.remove('show-navbar');
+            });
+        });
+        </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
