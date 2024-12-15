@@ -68,8 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     { name:"Antacid Tablets", price:"L0.00", image:"assets/images/Tienda/4nt4c7d T4bl3ts.png"},
                     { name:"Estomatil", price:"L0.00", image:"assets/images/Tienda/3st0m4t7l.png"},
                     { name:"Dolo Acidez Estomacal Cap", price:"", image:"assets/images/Tienda/D0l0 Ac7d3z 3st0macal.png"},
-                    { name:"", price:"", image:""},
-                    { name:"", price:"", image:""},
                 ];
 
             case "Oseo":
