@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     const productFilter = document.getElementById("productFilter");
     const productsContainer = document.querySelector(".container-products");
@@ -37,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
                    { name: "Tilovit", price: "L100.00", image: "assets/images/Tienda/T1lovit.png"} ,
                    { name: "Damianil", price: "L198.00", image: "assets/images/Tienda/D4m1an1il.png"} ,
                    { name: "Ginseng Vit", price: "L187.00", image: "assets/images/Tienda/G1ns3t_V1t.png"} ,
-                   { name: "Ginseng + Ginkgo Biloba", price: "L197.00", image: "assets/images/Tienda/G1nseng+.png"} ,
-                   { name: "Ginkgo Vit", price: "L182.00", image: "assets/images/Tienda/G1nk0V1t.png"} ,
+                   { name: "Ginseng + Ginkgo Biloba", price: "L.197.00", image: "assets/images/Tienda/G1nseng+.png"} ,
+                   { name: "Ginkgo Vit", price: "L.182.00", image: "assets/images/Tienda/G1nk0V1t.png"} ,
                    { name: "Triple Oxigenador Cerebral", price: "L450.00", image: "assets/images/Tienda/Tripple0Xig3nad0or.png"} ,
-                   ];
+                ];
 
             case "Digestivo":
                 return [
@@ -71,196 +70,125 @@ document.addEventListener("DOMContentLoaded", function () {
                     { name:"Dolo Acidez Estomacal Cap", price:"", image:"assets/images/Tienda/D0l0 Ac7d3z 3st0macal.png"},
                     { name:"", price:"", image:""},
                     { name:"", price:"", image:""},
-
-                ]
+                ];
 
             case "Oseo":
-                return[
+                return [
                     {name: "Artricalm 15 Cap", price:"L418.00", image: "assets/images/Tienda/4rtr7ca4lm 15 cap.png"},
                     {name: "Dolox Suplemento Alimenticio Capsulas", price: "L250.00", image: "assets/images/Tienda/D0l0x Suplemento.png"},
                     {name: "Dolox Suplemento Alimenticio Bebible", price: "L0.00", image:"assets/images/Tienda/Dolox B3b7b73s.png"},
                     {name: "Potassium Citrate 100 Tabletas", price:"L0.00", image:"assets/images/Tienda/P0t4ss7um_C7tr4t3.png"},
                     {name: "Calcio Magnesium Zinc 60 caps.", price:"L0.00", image:"assets/images/Tienda/C47c7o_M4gn3s7um_Z7nc.png"},
                     {name: "K-Citmag Magnesio Citrate 60 caps", price:"L0.00", image:"assets/images/Tienda/K-M4gn3s7o.png"},
-                    {name: "Flexi-Calm 120 Caps", price:"L0.00", image:"assets/images/Tienda/Fl3x7_C47m.png"},
-                    {name: "Shark Cartilage Collage 60 caps", price:"L0.00", image:"assets/images/Tienda/Sh4rk_C4rt774g3_C077473N.png"},
-                    {name: "Shar Cartigale 60 caps", price:"L0.00", image:"assets/images/Tienda/Sh4rlkC4.png"},
-                    {name: "Dolox Crema", price:"L0.00", image:"assets/images/Tienda/D070x_F0rt3.png"},
-                    {name: "Dolox 60 caps", price:"L0.00", image:"assets/images/Tienda/Dolox_caps.png"},
-                    {name: "Dolox 30 caps", price:"L0.00", image:"assets/images/Tienda/D070x_30Caps.png"},
-                    {name: "Super Artricalma Crema", price:"L0.00", image:"assets/images/Tienda/Sup3r_4rtr7c47m4_cr3m4.png"},
-                    {name: "Dolox Jarabe 120 ML", price:"L0.00", image:"assets/images/Tienda/D070x_J4R4BE3_120ML.png"},
-                    {name: "Artricalm 60 caps", price:"L0.00", image:"assets/images/Tienda/4rtr7c4lm_60caps.png"},
-                    {name: "Artricalm 30 caps", price:"L0.00", image:"assets/images/Tienda/4rtr7c4lm_30caps.png"},
-                ]
-
-            case "ReproductorM":
-                return [
-                    {name: "Saw Palmetto 60 caps", price:"L0.00", image: "assets/images/Tienda/S4w_p47m3tt0_60caps.png"},
-                    {name: "Maca", price: "L0.00", image: "assets/images/Tienda/M4c4_80caps.png"},
-                    {name: "Sexi-Forte Vegetal 60 caps", price:"L0.00", image:"assets/images/Tienda/s3x7_f0rt3_60caps.png"},
-                    {name: "Pumpkin", price:"L0.00", image:"assets/images/Tienda/Pumpk7n_60caps.png"},
-                    {name: "z-40 50 caps", price:"L0.00", image:"assets/images/Tienda/Z-40_50caps.png"},
-                    {name: "Ortiga 60 caps", price:"L0.00", image:"assets/images/Tienda/0rt7g4_60caps.png"},
-                    {name: "Maca Dorada 60 caps", price:"L0.00", image:"assets/images/Tienda/M4c4_D0r4d4_60caps.png"},
-                    {name: "Prosta Hercules 50 caps", price:"L0.00", image:"assets/images/Tienda/Pr0st4_H3rcul3s_50caps.png"},
-                    {name: "Maca Real 60 Tabs", price:"L0.00", image:"assets/images/Tienda/M4c4_r34l_60tabs.png"},
-                    {name: "VitaFer-l", price:"L0.00", image:"assets/images/Tienda/V7t4f3r-L.png"},
-                ]
-
-            case "ReproductorF":
-                return[
-                    {name:"Evening Primrose Oil 100 caps", price:"L0.00", image:"assets/images/Tienda/3v3n7ng_Pr7m3r0s_07l.png"},
-                    {name:"Gynefem (Jabon Intimos)", price:"L0.00", image:"assets/images/Tienda/G7n3f3m.png"},
-                    {name:"Graviola 60 caps", price:"L0.00", image:"assets/images/Tienda/Gr4v70l4 60 caps.png"},
-                    {name:"Vaginox Crema 50ml", price:"L0.00", image:"assets/images/Tienda/V4g7n0x_cr3m4.png"},
-                    {name:"Ovaril 60 caps", price:"L0.00", image:"assets/images/Tienda/Ov4r7l_60 caps.png"},
-                    {name:"Nutribalance Control Hormonal 90 caps", price:"L0.00", image:"assets/images/Tienda/Nutr7b4l4nc3.png"},
-                    {name:"Citostac Jarabe Natural", price:"L0.00", image:"assets/images/Tienda/C7t0st4c_J4r4b3_N4tur47.png"},
-                    {name:"Graviola 100 caps", price:"L0.00", image:"assets/images/Tienda/Gr4v70l4_100caps.png"},
-                ]
-
-            case "Urinario":
-                return[
-                    {name:"Urovit", price:"L0.00", image:"assets/images/Tienda/Ur0v7t.png"},
-                    {name:"Colacvit", price:"L0.00", image:"assets/images/Tienda/C0l4cv7t.png"},
-                    {name:"RiñoVit", price:"L0.00", image:"assets/images/Tienda/R7ñ0v7t.png"},
-                    {name:"Calaguala", price:"L0.00", image:"assets/images/Tienda/C4lgu474.png"},
-                    {name:"Quiebre Piedra", price:"L0.00", image:"assets/images/Tienda/Qu73br4_P73dr4.png"},
-                    {name:"Pañiloyan", price:"L0.00", image:"assets/images/Tienda/P4ñil0y4n.png"},
-                    {name:"Cramberry 60 caps", price:"L0.00", image:"assets/images/Tienda/Cr4nberry_60c4ps.png"},
-                    {name:"Té Kalusuanga", price:"L0.00", image:"assets/images/Tienda/T3_K4lusu4ng4.png"},
-                ]
-
-            case "Bajar_Peso":
-                return[
-                    {name:"St. Jhons 60 caps", price:"L0.00", image:"assets/images/Tienda/St.Jh0ns_60c4ps.png"},
-                    {name:"Melatonina 60 caps", price:"L0.00", image:"assets/images/Tienda/M3l4t0n7n_60c4ps.png"},
-                    {name:"Melatonina 120 caps", price:"L0.00", image:"assets/images/Tienda/M3l4t0nin_120caps.png"},
-                    {name:"5-HTP 60 caps", price:"L0.00", image:"assets/images/Tienda/5-HTP_60caps.png"},
-                    {name:"Concentrix 60 caps", price:"L0.00", image:"assets/images/Tienda/C0nc3ntrix_60caps.png"},
-                    {name:"Memorix 60 caps", price:"L0.00", image:"assets/images/Tienda/M3m0r7x_60caps.png"},
-                    {name:"Summet Gel 10 Caps", price:"L0.00", image:"assets/images/Tienda/Summ3t_G3l_10c4ps.png"},
-                    {name:"ADP 30 caps", price:"L0.00", image:"assets/images/Tienda/ADP.png"},
-                ]
+                    {name: "Flexi-Calm 120 Caps", price:"L0.00", image:"assets/images/Tienda/Flexi C4lm.png"},
+                    {name: "Alfalfa 120 Caps", price:"L0.00", image:"assets/images/Tienda/4lf4lf4 120.png"},
+                    {name: "Cosequin Max Triple Strength", price:"L0.00", image:"assets/images/Tienda/C0s3qu1n.png"},
+                    {name: "Calcio 500 + D3", price:"L0.00", image:"assets/images/Tienda/C47c7o 500 + D3.png"},
+                    {name: "Magnesio 500", price:"L0.00", image:"assets/images/Tienda/M4gn3s10.png"},
+                    {name: "Calcio Magnesio con Vitamina C", price:"L0.00", image:"assets/images/Tienda/C47c7o + M4gn3s10.png"},
+                    {name: "D3 5000 IU", price:"L0.00", image:"assets/images/Tienda/D3 5IU.png"},
+                    {name: "Calcio + D3", price:"L0.00", image:"assets/images/Tienda/C47c7o.png"},
+                    {name: "Progevit", price:"L0.00", image:"assets/images/Tienda/Pr07g3v1t.png"},
+                    {name: "Calcio Carbonato", price:"L0.00", image:"assets/images/Tienda/C47c7o C4rb0n4t0.png"},
+                    {name: "Calcio + Vitamina C", price:"L0.00", image:"assets/images/Tienda/C47c7o + V1t4m1n4 C.png"},
+                ];
 
             default:
                 return [];
         }
     }
 
-      function createProductCard(product) {
+    function createProductCard(product) {
+        if (!product.name || !product.price || !product.image) {
+            console.warn("Producto inválido:", product);
+            return null; // Salta productos inválidos
+        }
+
         const card = document.createElement("div");
         card.className = "product-card";
-        card.innerHTML = 
-    <div class="container-img">
-        <center>
-            <img style="width: 250px; height: 250px; object-fit: cover;" src="${product.image}" alt="${product.name}">
-        </center>
-        <div class="button-group">
-            <span>
-                <i class="fa-regular fa-eye"></i>
-            </span>
-            <span>
-                <i class="fa-regular fa-heart"></i>
-            </span>
-        </div>
-    </div>
-    <div class="content-card-product">
-        <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-        </div>
-        <h3>${product.name}</h3>
-        <p class="price">${product.price}</p>
-    </div>
-;
+        card.innerHTML = `
+            <div class="container-img">
+                <img src="${product.image}" alt="${product.name}" style="width: 250px; height: 250px; object-fit: cover;">
+            </div>
+            <div class="content-card-product">
+                <h3>${product.name}</h3>
+                <p class="price">${product.price}</p>
+                <button 
+                    class="btn-add-cart" 
+                    data-name="${product.name}" 
+                    data-price="${product.price}" 
+                    data-image="${product.image}">
+                    Añadir al carrito
+                </button>
+            </div>
+        `;
+
+        const addToCartButton = card.querySelector(".btn-add-cart");
+        addToCartButton.addEventListener("click", addToCart);
 
         return card;
     }
-});
 
+    let cartItems = [];
 
-document.addEventListener('DOMContentLoaded', () => {
-    const productFilter = document.getElementById('productFilter');
-    const productSearch = document.getElementById('productSearch');
-    const containerProducts = document.querySelector('.container-products');
+    function addToCart(event) {
+        const button = event.target;
+        const name = button.getAttribute("data-name");
+        const price = button.getAttribute("data-price");
+        const image = button.getAttribute("data-image");
 
-    function filterProducts() {
-        const filterValue = productFilter.value.toLowerCase();
-        const searchValue = productSearch.value.toLowerCase();
+        const item = { name, price, image };
+        cartItems.push(item);
 
-        const products = containerProducts.querySelectorAll('.card-product');
-
-        products.forEach(product => {
-            const category = product.getAttribute('data-category').toLowerCase();
-            const title = product.querySelector('.content-card-product h3').textContent.toLowerCase();
-
-            if ((filterValue === '' || category.includes(filterValue)) &&
-                (searchValue === '' || title.includes(searchValue))) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-    }
-
-    productFilter.addEventListener('change', filterProducts);
-    productSearch.addEventListener('input', filterProducts);
-});
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const cartItems = [];
-    const cartItemsContainer = document.getElementById("cart-items");
-    const cartTotalAmount = document.getElementById("cart-total-amount");
-
-    // Función para añadir productos al carrito
-    function addToCart(product) {
-        cartItems.push(product);
+        saveCart();
         updateCart();
     }
 
-    // Función para actualizar el contenido del carrito
     function updateCart() {
-        cartItemsContainer.innerHTML = ""; // Limpiar el contenedor
-        let total = 0;
+        const cartContainer = document.querySelector(".cart");
+        cartContainer.innerHTML = "";
 
-        if (cartItems.length === 0) {
-            cartItemsContainer.innerHTML = `<p>No hay productos en el carrito.</p>`;
-        } else {
-            cartItems.forEach(item => {
-                const cartItem = document.createElement("div");
-                cartItem.className = "cart-item";
-                cartItem.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-                    <div class="cart-item-details">
-                        <h4>${item.name}</h4>
-                        <p>Precio: ${item.price}</p>
-                    </div>
-                `;
-                cartItemsContainer.appendChild(cartItem);
-                total += parseFloat(item.price.replace("L.", "").replace(",", ""));
-            });
-        }
+        cartItems.forEach(item => {
+            const cartItem = document.createElement("div");
+            cartItem.className = "cart-item";
+            cartItem.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover;">
+                <span>${item.name}</span>
+                <span>${item.price}</span>
+                <button class="remove-cart" data-name="${item.name}">Eliminar</button>
+            `;
 
-        cartTotalAmount.textContent = `L.${total.toFixed(2)}`;
+            const removeButton = cartItem.querySelector(".remove-cart");
+            removeButton.addEventListener("click", removeFromCart);
+
+            cartContainer.appendChild(cartItem);
+        });
+
+        const cartTotal = cartItems.reduce((total, item) => total + parseFloat(item.price.replace("L.", "")), 0);
+        document.querySelector(".cart-total").textContent = `Total: L. ${cartTotal.toFixed(2)}`;
     }
 
-    // Delegar clics en botones de añadir al carrito
-    document.body.addEventListener("click", function (e) {
-        if (e.target.classList.contains("btn-add-cart")) {
-            const product = {
-                name: e.target.dataset.name,
-                price: e.target.dataset.price,
-                image: e.target.dataset.image,
-            };
-            addToCart(product);
-        }
-    });
-});
+    function removeFromCart(event) {
+        const button = event.target;
+        const name = button.getAttribute("data-name");
 
-    
+        cartItems = cartItems.filter(item => item.name !== name);
+
+        saveCart();
+        updateCart();
+    }
+
+    function saveCart() {
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
+
+    function loadCart() {
+        const storedCart = localStorage.getItem("cartItems");
+        if (storedCart) {
+            cartItems = JSON.parse(storedCart);
+            updateCart();
+        }
+    }
+
+    loadCart();
+});
