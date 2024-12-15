@@ -149,17 +149,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-   function createProductCard(product) {
-    const card = document.createElement("div");
-    card.className = "product-card";
-    card.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" class="product-image">
-        <h3 class="product-name">${product.name}</h3>
-        <p class="product-price">${product.price}</p>
-        <button class="btn-add-cart" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">Añadir al carrito</button>
-    `;
-    return card;
-}
+      function createProductCard(product) {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.innerHTML = 
+    <div class="container-img">
+        <center>
+            <img style="width: 250px; height: 250px; object-fit: cover;" src="${product.image}" alt="${product.name}">
+        </center>
+        <div class="button-group">
+            <span>
+                <i class="fa-regular fa-eye"></i>
+            </span>
+            <span>
+                <i class="fa-regular fa-heart"></i>
+            </span>
+        </div>
+    </div>
+    <div class="content-card-product">
+        <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <h3>${product.name}</h3>
+        <p class="price">${product.price}</p>
+    </div>
+;
+
+        return card;
+    }
+});
 
 
 document.addEventListener('DOMContentLoaded', () => {
