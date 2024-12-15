@@ -143,6 +143,31 @@
                             </div>
                         </div>
                     </div>
+
+			<script>
+                        // Obtener elementos
+                        const cartBtn = document.getElementById('cart-btn');
+                        const cartModal = document.getElementById('cart-modal');
+                        const closeBtn = document.querySelector('.close-btn');
+
+                        // Mostrar el modal al presionar el botón del carrito
+                        cartBtn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            cartModal.style.display = 'block';
+                        });
+
+                        // Cerrar el modal al presionar la "X"
+                        closeBtn.addEventListener('click', () => {
+                            cartModal.style.display = 'none';
+                        });
+
+                        // Cerrar el modal al hacer clic fuera del contenido del modal
+                        window.addEventListener('click', (e) => {
+                            if (e.target === cartModal) {
+                                cartModal.style.display = 'none';
+                            }
+                        });
+                    </script>
 			
      <style> 
         .cart-count {
