@@ -149,39 +149,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function createProductCard(product) {
-        const card = document.createElement("div");
-        card.className = "product-card";
-        card.innerHTML = `
-    <div class="container-img">
-        <center>
-            <img style="width: 250px; height: 250px; object-fit: cover;" src="${product.image}" alt="${product.name}">
-        </center>
-        <div class="button-group">
-            <span>
-                <i class="fa-regular fa-eye"></i>
-            </span>
-            <span>
-                <i class="fa-regular fa-heart"></i>
-            </span>
-        </div>
-    </div>
-    <div class="content-card-product">
-        <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-        </div>
-        <h3>${product.name}</h3>
-        <p class="price">${product.price}</p>
-    </div>
-`;
+   function createProductCard(product) {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="product-image">
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-price">${product.price}</p>
+        <button class="btn-add-cart" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">Añadir al carrito</button>
+    `;
+    return card;
+}
 
-        return card;
-    }
-});
 
 document.addEventListener('DOMContentLoaded', () => {
     const productFilter = document.getElementById('productFilter');
@@ -210,3 +189,56 @@ document.addEventListener('DOMContentLoaded', () => {
     productFilter.addEventListener('change', filterProducts);
     productSearch.addEventListener('input', filterProducts);
 });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const cartItems = [];
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartTotalAmount = document.getElementById("cart-total-amount");
+
+    // Función para añadir productos al carrito
+    function addToCart(product) {
+        cartItems.push(product);
+        updateCart();
+    }
+
+    // Función para actualizar el contenido del carrito
+    function updateCart() {
+        cartItemsContainer.innerHTML = ""; // Limpiar el contenedor
+        let total = 0;
+
+        if (cartItems.length === 0) {
+            cartItemsContainer.innerHTML = `<p>No hay productos en el carrito.</p>`;
+        } else {
+            cartItems.forEach(item => {
+                const cartItem = document.createElement("div");
+                cartItem.className = "cart-item";
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <h4>${item.name}</h4>
+                        <p>Precio: ${item.price}</p>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+                total += parseFloat(item.price.replace("L.", "").replace(",", ""));
+            });
+        }
+
+        cartTotalAmount.textContent = `L.${total.toFixed(2)}`;
+    }
+
+    // Delegar clics en botones de añadir al carrito
+    document.body.addEventListener("click", function (e) {
+        if (e.target.classList.contains("btn-add-cart")) {
+            const product = {
+                name: e.target.dataset.name,
+                price: e.target.dataset.price,
+                image: e.target.dataset.image,
+            };
+            addToCart(product);
+        }
+    });
+});
+
+    
