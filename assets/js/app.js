@@ -22,11 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const products = document.querySelectorAll(".product-card");
         products.forEach(product => {
             const name = product.querySelector("h3").textContent.toLowerCase();
-            if (name.includes(query)) {
-                product.style.display = "block";
-            } else {
-                product.style.display = "none";
-            }
+            product.style.display = name.includes(query) ? "block" : "none";
         });
     }
 
@@ -99,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function createProductCard(product) {
+function createProductCard(product) {
         if (!product.name || !product.price || !product.image) {
             console.warn("Producto inválido:", product);
             return null; // Salta productos inválidos
@@ -160,13 +156,15 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             cartItems.forEach(item => {
                 const cartItem = document.createElement("div");
-                cartItem.className = "cart-item";
+                cartItem.className = "cart-item d-flex align-items-center";
                 cartItem.innerHTML = `
                     <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px; object-fit: cover;">
-                    <span>${item.name}</span>
-                    <span>Cantidad: ${item.quantity}</span>
-                    <span>${item.price}</span>
-                    <button class="remove-cart" data-name="${item.name}">Eliminar</button>
+                    <div class="cart-item-details ml-2">
+                        <span>${item.name}</span>
+                        <span>Cantidad: ${item.quantity}</span>
+                        <span>${item.price}</span>
+                        <button class="remove-cart" data-name="${item.name}">Eliminar</button>
+                    </div>
                 `;
 
                 const removeButton = cartItem.querySelector(".remove-cart");
