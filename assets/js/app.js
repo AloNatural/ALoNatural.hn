@@ -1,4 +1,4 @@
- document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const productFilter = document.getElementById("productFilter");
     const productsContainer = document.querySelector(".container-products");
     const cartCount = document.querySelector(".cart-count");
