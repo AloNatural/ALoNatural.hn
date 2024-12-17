@@ -54,12 +54,92 @@
                                 background-color: green;
                                 border-radius: 50%;
                             }
-                    
                             .icon-container i {
                                 font-size: 20px;
                                 color: white; 
                             }
 	           </style>
+	    
+	       <style>      
+         .Checkout {
+            max-width: 700px;
+            margin: auto;
+            
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+       .pedido {
+        margin-bottom: 20px;
+        font-size: 15px;
+        }
+       .pedido h2 {
+        text-align: center;
+        font-size: 20px;
+       }
+      .pedido-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    .pedido-item img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .pedido-item .info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .pedido-item .info p {
+        margin: 3px 0;
+        font-size: 14px;
+    }
+    .pedido-item .info p strong {
+        font-size: 15px;
+    }
+    .pedido-total {
+        text-align: right;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+    }
+        .formulario label {
+            display: block;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .formulario input, .formulario select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: #218838;
+            color:white;
+
+        }
+    </style>
 
    </head>
   
@@ -121,4 +201,114 @@
                             </div>
                         </div>
                     </div>
+			 <main>
+			<br><br>
+
+			
+                      <!-- Checkout-->
+     <div class="Checkout">
+        <!-- Resumen del Pedido -->
+        <div class="pedido">
+            <h2>Resumen del Pedido</h2>
+            <ul id="pedido-lista">
+                <!-- Aquí se insertarán los productos dinámicamente -->
+            </ul>
+            <p><strong>Total: </strong><span id="total-amount">L.0.00</span></p>
+        </div>
+
+        <!-- Formulario de Checkout -->
+        <div class="formulario">
+            <h2>Datos de Envío</h2>
+            <form id="checkout-form">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+
+                <label for="pais">País:</label>
+                <select id="pais" name="pais" required>
+                    <option value="">Seleccionar País</option>
+                    <option value="HN">Honduras</option>
+                </select>
+
+                <label for="codigo-postal">Código Postal:</label>
+                <input type="text" id="codigo-postal" name="codigo-postal" required>
+
+                <button type="submit" class="btn">Finalizar Pedido</button>
+                <button type="submit" class="btn">Cancelar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+            const pedidoLista = document.getElementById('pedido-lista');
+            const totalAmount = document.getElementById('total-amount');
+            
+            let total = 0;
+
+            if (cart.length === 0) {
+                pedidoLista.innerHTML = '<p>No hay productos en el carrito.</p>';
+                return;
+            }
+
+            cart.forEach(item => {
+                const div = document.createElement('div');
+                div.classList.add('pedido-item');
+                div.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="info">
+                        <p><strong>${item.name}</strong></p>
+                        <p>Precio: L.${item.price.toFixed(2)}</p>
+                        <p>Cantidad: ${item.quantity}</p>
+                        <p>Subtotal: <strong>L.${(item.price * item.quantity).toFixed(2)}</strong></p>
+                    </div>
+                `;
+                pedidoLista.appendChild(div);
+                total += item.price * item.quantity;
+            });
+
+            totalAmount.textContent = `L.${total.toFixed(2)}`;
+        });
+
+        // Manejar el envío del formulario
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const direccion = document.getElementById('direccion').value;
+            const ciudad = document.getElementById('ciudad').value;
+            const pais = document.getElementById('pais').value;
+            const codigoPostal = document.getElementById('codigo-postal').value;
+
+            alert(`¡Gracias, ${nombre}! Tu pedido será enviado a la dirección: ${direccion}, ${ciudad}, ${pais}. \nTe contactaremos a ${email}.`);
+        });
+    </script>
+                        
+                    </main>
+    
+
+        <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+        <!-- Owl Carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Custom JS -->
+        <script src="../../public/assets/js/script.js"></script>
+
+    </body>
+
+</html>
 
