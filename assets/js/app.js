@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    
+
     function getProductosPorCategoria(category) {
         switch (category) {
             case "Nervioso":
@@ -89,20 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     {name: "Artricalm 15 Cap", price:"L418.00", image: "assets/images/Tienda/4rtr7ca4lm 15 cap.png"},
                     {name: "Dolox Suplemento Alimenticio Capsulas", price: "L250.00", image: "assets/images/Tienda/D0l0x Suplemento.png"},
                     {name: "Dolox Suplemento Alimenticio Bebible", price: "L0.00", image:"assets/images/Tienda/Dolox B3b7b73s.png"},
-                    {name: "Potassium Citrate 100 Tabletas", price:"L0.00", image:"assets/images/Tienda/P0t4ss7um_C7tr4t3.png"},
-                    {name: "Calcio Magnesium Zinc 60 caps.", price:"L0.00", image:"assets/images/Tienda/C47c7o_M4gn3s7um_Z7nc.png"},
-                    {name: "K-Citmag Magnesio Citrate 60 caps", price:"L0.00", image:"assets/images/Tienda/K-M4gn3s7o.png"},
-                    {name: "Flexi-Calm 120 Caps", price:"L0.00", image:"assets/images/Tienda/Flexi C4lm.png"},
-                    {name: "Alfalfa 120 Caps", price:"L0.00", image:"assets/images/Tienda/4lf4lf4 120.png"},
-                    {name: "Cosequin Max Triple Strength", price:"L0.00", image:"assets/images/Tienda/C0s3qu1n.png"},
-                    {name: "Calcio 500 + D3", price:"L0.00", image:"assets/images/Tienda/C47c7o 500 + D3.png"},
-                    {name: "Magnesio 500", price:"L0.00", image:"assets/images/Tienda/M4gn3s10.png"},
-                    {name: "Calcio Magnesio con Vitamina C", price:"L0.00", image:"assets/images/Tienda/C47c7o + M4gn3s10.png"},
-                    {name: "D3 5000 IU", price:"L0.00", image:"assets/images/Tienda/D3 5IU.png"},
-                    {name: "Calcio + D3", price:"L0.00", image:"assets/images/Tienda/C47c7o.png"},
-                    {name: "Progevit", price:"L0.00", image:"assets/images/Tienda/Pr07g3v1t.png"},
-                    {name: "Calcio Carbonato", price:"L0.00", image:"assets/images/Tienda/C47c7o C4rb0n4t0.png"},
-                    {name: "Calcio + Vitamina C", price:"L0.00", image:"assets/images/Tienda/C47c7o + V1t4m1n4 C.png"},
+                    {name: "Potassium Citrate 100 Tabletas", price:"L0.00", image:"assets/images/Tienda/P0t4ss7um C1tr4t3.png"},
+                    {name: "Exfortius 20 Tabletas", price:"L209.00", image:"assets/images/Tienda/3xf0r73us.png"},
+                    {name: "Glucosamina 300 mg 90 cápsulas", price:"L255.00", image:"assets/images/Tienda/Gluc0s4m1n4.png"},
+                    {name: "Calcior D3", price:"L.0.00", image:"assets/images/Tienda/C4lci0r 0 D3.png"},
+                    {name: "Artricalm 15 Cap x 3", price:"L418.00", image:"assets/images/Tienda/Artr1c4lm.png"},
                 ];
 
             default:
@@ -110,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-      function createProductCard(product) {
+    function createProductCard(product) {
         if (!product.name || !product.price || !product.image) {
             console.warn("Producto inválido:", product);
             return null; // Salta productos inválidos
@@ -149,8 +140,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const price = button.getAttribute("data-price");
         const image = button.getAttribute("data-image");
 
-        const item = { name, price, image };
-        cartItems.push(item);
+        let item = cartItems.find(i => i.name === name);
+        if (item) {
+            item.quantity += 1;
+        } else {
+            item = { name, price, image, quantity: 1 };
+            cartItems.push(item);
+        }
 
         saveCart();
         updateCart();
@@ -169,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 cartItem.innerHTML = `
                     <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover;">
                     <span>${item.name}</span>
+                    <span>Cantidad: ${item.quantity}</span>
                     <span>${item.price}</span>
                     <button class="remove-cart" data-name="${item.name}">Eliminar</button>
                 `;
@@ -180,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        const cartTotal = cartItems.reduce((total, item) => total + parseFloat(item.price.replace("L.", "")), 0);
+        const cartTotal = cartItems.reduce((total, item) => total + (parseFloat(item.price.replace("L.", "")) * item.quantity), 0);
         document.querySelector("#cart-total-amount").textContent = `L. ${cartTotal.toFixed(2)}`;
 
         cartCount.textContent = cartItems.length; // Actualiza el contador del carrito
