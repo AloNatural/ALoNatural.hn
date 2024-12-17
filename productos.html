@@ -144,28 +144,6 @@
                         </div>
                     </div>
 
-		 <script>
-                  // Abrir y cerrar el modal del carrito
-                   const cartBtn = document.getElementById("cart-btn");
-                   const cartModal = document.getElementById("cart-modal");
-                   const closeBtn = document.querySelector(".close-btn");
-
-                   cartBtn.addEventListener("click", () => {
-                   cartModal.style.display = "block";
-                   });
-
-                   closeBtn.addEventListener("click", () => {
-                   cartModal.style.display = "none";
-                 });
-
-                 // También cerrar cuando se haga clic fuera del modal
-                 window.addEventListener("click", function(event) {
-                 if (event.target === cartModal) {
-                   cartModal.style.display = "none";
-                   }
-                 });
-                    </script>
-
 	 <style> 
 .cart-item {
     display: flex;
@@ -282,8 +260,7 @@
             }
         }
     </style>
-
-              
+  
 <style>
     .top-products {
 	display: flex;
