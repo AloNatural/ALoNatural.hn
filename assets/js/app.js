@@ -87,13 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
             case "Oseo":
                 return [
                     {name: "Artricalm 15 Cap", price:"L418.00", image: "assets/images/Tienda/4rtr7ca4lm 15 cap.png"},
-                    {name: "Dolox Suplemento Alimenticio Capsulas", price: "L250.00", image: "assets/images/Tienda/D0l0x Suplemento.png"},
-                    {name: "Dolox Suplemento Alimenticio Bebible", price: "L0.00", image:"assets/images/Tienda/Dolox B3b7b73s.png"},
-                    {name: "Potassium Citrate 100 Tabletas", price:"L0.00", image:"assets/images/Tienda/P0t4ss7um C1tr4t3.png"},
-                    {name: "Exfortius 20 Tabletas", price:"L209.00", image:"assets/images/Tienda/3xf0r73us.png"},
-                    {name: "Glucosamina 300 mg 90 cápsulas", price:"L255.00", image:"assets/images/Tienda/Gluc0s4m1n4.png"},
-                    {name: "Calcior D3", price:"L.0.00", image:"assets/images/Tienda/C4lci0r 0 D3.png"},
-                    {name: "Artricalm 15 Cap x 3", price:"L418.00", image:"assets/images/Tienda/Artr1c4lm.png"},
+                    {name: "Dolox Suplemento Alimenticio Capsulas 30", price:"L260.00", image: "assets/images/Tienda/D0l0x 30.png"},
+                    {name: "Cálcio + Vitaminas", price:"L284.00", image: "assets/images/Tienda/C4lci0+V1t.png"},
+                    {name: "Glucosamina 300 mg 90 cápsulas", price:"L255.00", image: "assets/images/Tienda/Gluc0s4m1n4.png"},
+                    {name: "Calcior D3", price:"L0.00", image: "assets/images/Tienda/C4lci0r 0 D3.png"},
+                    {name: "Exfortius 20 Tabletas", price:"L209.00", image: "assets/images/Tienda/3xf0r73us.png"},
                 ];
 
             default:
@@ -150,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         saveCart();
         updateCart();
+        updateCartCount(); // Actualizar número de productos en el ícono del carrito
     }
 
     function updateCart() {
@@ -163,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const cartItem = document.createElement("div");
                 cartItem.className = "cart-item";
                 cartItem.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover;">
+                    <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px; object-fit: cover;">
                     <span>${item.name}</span>
                     <span>Cantidad: ${item.quantity}</span>
                     <span>${item.price}</span>
@@ -179,8 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const cartTotal = cartItems.reduce((total, item) => total + (parseFloat(item.price.replace("L.", "")) * item.quantity), 0);
         document.querySelector("#cart-total-amount").textContent = `L. ${cartTotal.toFixed(2)}`;
-
-        cartCount.textContent = cartItems.length; // Actualiza el contador del carrito
     }
 
     function removeFromCart(event) {
@@ -191,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         saveCart();
         updateCart();
+        updateCartCount(); // Actualizar número de productos en el ícono del carrito
     }
 
     function saveCart() {
@@ -226,4 +224,10 @@ document.addEventListener("DOMContentLoaded", function () {
             cartModal.style.display = "none";
         }
     });
+
+    function updateCartCount() {
+        cartCount.textContent = cartItems.length; // Actualiza el contador del carrito
+    }
+
+    updateCartCount(); // Inicialmente, mostrar la cantidad correcta de productos en el ícono del carrito
 });
