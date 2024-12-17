@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const products = getProductosPorCategoria(category); // Obtener productos de la categoría
         products.forEach(product => {
             const card = createProductCard(product); // Crear tarjeta del producto
-             if (card) productsContainer.appendChild(card); // Añadir la tarjeta al contenedor
+            if (card) productsContainer.appendChild(card); // Añadir la tarjeta al contenedor
         });
     }
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         changeProducts(selectedCategory); // Llamar a la función para actualizar los productos
     });
 
-     function searchProducts() {
+    function searchProducts() {
         const query = document.getElementById("searchInput").value.toLowerCase();
         const products = document.querySelectorAll(".product-card");
         products.forEach(product => {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
+    
     function getProductosPorCategoria(category) {
         switch (category) {
             case "Nervioso":
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-     function createProductCard(product) {
+      function createProductCard(product) {
         if (!product.name || !product.price || !product.image) {
             console.warn("Producto inválido:", product);
             return null; // Salta productos inválidos
@@ -140,8 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return card;
     }
-    
-   let cartItems = [];
+
+    let cartItems = [];
 
     function addToCart(event) {
         const button = event.target;
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCart();
     }
 
-   function updateCart() {
+    function updateCart() {
         const cartContainer = document.querySelector("#cart-items");
         cartContainer.innerHTML = "";
 
@@ -209,4 +209,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     loadCart();
+
+    // Abrir y cerrar el modal del carrito
+    const cartBtn = document.getElementById("cart-btn");
+    const cartModal = document.getElementById("cart-modal");
+    const closeBtn = document.querySelector(".close-btn");
+
+    cartBtn.addEventListener("click", () => {
+        cartModal.style.display = "block";
+    });
+
+    closeBtn.addEventListener("click", () => {
+        cartModal.style.display = "none";
+    });
+
+    // También cerrar cuando se haga clic fuera del modal
+    window.addEventListener("click", function(event) {
+        if (event.target === cartModal) {
+            cartModal.style.display = "none";
+        }
+    });
 });
