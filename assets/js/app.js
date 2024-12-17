@@ -147,7 +147,7 @@ function createProductCard(product) {
         updateCartCount(); // Actualizar número de productos en el ícono del carrito
     }
 
-   function updateCart() {
+  function updateCart() {
     const cartContainer = document.querySelector("#cart-items");
     cartContainer.innerHTML = "";
 
@@ -156,19 +156,31 @@ function createProductCard(product) {
     } else {
         cartItems.forEach(item => {
             const cartItem = document.createElement("div");
-            cartItem.className = "cart-item d-flex align-items-center justify-content-between p-3 mb-2"; // Clases para diseño ordenado
+            cartItem.className = "cart-item d-flex align-items-center justify-content-between p-3 mb-2";
+            cartItem.style.border = "1px solid #ddd";
+            cartItem.style.borderRadius = "8px";
+            cartItem.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.1)";
+            cartItem.style.backgroundColor = "#f9f9f9";
+
+            // Validar precio
+            const price = parseFloat(item.price.replace("L.", "")) || 0; // Corregir NaN si el precio es inválido
+            const totalItemPrice = (price * item.quantity).toFixed(2);
 
             cartItem.innerHTML = `
-                <div class="cart-item-image" style="flex: 0 0 100px;">
-                    <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                <div class="cart-item-image" style="flex: 0 0 80px;">
+                    <img src="${item.image}" alt="${item.name}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
                 </div>
                 <div class="cart-item-details" style="flex: 1; margin-left: 15px;">
                     <h5 style="margin: 0; font-size: 1rem; font-weight: bold;">${item.name}</h5>
                     <p style="margin: 5px 0; font-size: 0.9rem; color: #555;">Cantidad: <strong>${item.quantity}</strong></p>
-                    <p style="margin: 5px 0; font-size: 0.9rem; color: #555;">Precio: <strong>${item.price}</strong></p>
+                    <p style="margin: 5px 0; font-size: 0.9rem; color: #555;">Precio: <strong>L. ${totalItemPrice}</strong></p>
                 </div>
-                <div class="cart-item-actions" style="flex: 0 0 100px; text-align: center;">
-                    <button class="remove-cart btn btn-danger btn-sm" data-name="${item.name}" style="font-size: 0.8rem;">Eliminar</button>
+                <div class="cart-item-actions" style="flex: 0 0 80px; text-align: center;">
+                    <button class="remove-cart btn btn-danger btn-sm" 
+                            data-name="${item.name}" 
+                            style="font-size: 0.8rem; padding: 5px 8px;">
+                        Eliminar
+                    </button>
                 </div>
             `;
 
@@ -180,9 +192,14 @@ function createProductCard(product) {
     }
 
     // Calcular el total del carrito
-    const cartTotal = cartItems.reduce((total, item) => total + (parseFloat(item.price.replace("L.", "")) * item.quantity), 0);
+    const cartTotal = cartItems.reduce((total, item) => {
+        const price = parseFloat(item.price.replace("L.", "")) || 0; // Verificar precios vacíos o inválidos
+        return total + (price * item.quantity);
+    }, 0);
+
     document.querySelector("#cart-total-amount").textContent = `L. ${cartTotal.toFixed(2)}`;
 }
+
 
     function removeFromCart(event) {
         const button = event.target;
