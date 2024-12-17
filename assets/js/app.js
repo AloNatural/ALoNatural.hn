@@ -147,36 +147,42 @@ function createProductCard(product) {
         updateCartCount(); // Actualizar número de productos en el ícono del carrito
     }
 
-    function updateCart() {
-        const cartContainer = document.querySelector("#cart-items");
-        cartContainer.innerHTML = "";
+   function updateCart() {
+    const cartContainer = document.querySelector("#cart-items");
+    cartContainer.innerHTML = "";
 
-        if (cartItems.length === 0) {
-            cartContainer.innerHTML = "<p>No hay productos en el carrito.</p>";
-        } else {
-            cartItems.forEach(item => {
-                const cartItem = document.createElement("div");
-                cartItem.className = "cart-item d-flex align-items-center";
-                cartItem.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px; object-fit: cover;">
-                    <div class="cart-item-details ml-2">
-                        <span>${item.name}</span>
-                        <span>Cantidad: ${item.quantity}</span>
-                        <span>${item.price}</span>
-                        <button class="remove-cart" data-name="${item.name}">Eliminar</button>
-                    </div>
-                `;
+    if (cartItems.length === 0) {
+        cartContainer.innerHTML = "<p>No hay productos en el carrito.</p>";
+    } else {
+        cartItems.forEach(item => {
+            const cartItem = document.createElement("div");
+            cartItem.className = "cart-item d-flex align-items-center justify-content-between p-3 mb-2"; // Clases para diseño ordenado
 
-                const removeButton = cartItem.querySelector(".remove-cart");
-                removeButton.addEventListener("click", removeFromCart);
+            cartItem.innerHTML = `
+                <div class="cart-item-image" style="flex: 0 0 100px;">
+                    <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                </div>
+                <div class="cart-item-details" style="flex: 1; margin-left: 15px;">
+                    <h5 style="margin: 0; font-size: 1rem; font-weight: bold;">${item.name}</h5>
+                    <p style="margin: 5px 0; font-size: 0.9rem; color: #555;">Cantidad: <strong>${item.quantity}</strong></p>
+                    <p style="margin: 5px 0; font-size: 0.9rem; color: #555;">Precio: <strong>${item.price}</strong></p>
+                </div>
+                <div class="cart-item-actions" style="flex: 0 0 100px; text-align: center;">
+                    <button class="remove-cart btn btn-danger btn-sm" data-name="${item.name}" style="font-size: 0.8rem;">Eliminar</button>
+                </div>
+            `;
 
-                cartContainer.appendChild(cartItem);
-            });
-        }
+            const removeButton = cartItem.querySelector(".remove-cart");
+            removeButton.addEventListener("click", removeFromCart);
 
-        const cartTotal = cartItems.reduce((total, item) => total + (parseFloat(item.price.replace("L.", "")) * item.quantity), 0);
-        document.querySelector("#cart-total-amount").textContent = `L. ${cartTotal.toFixed(2)}`;
+            cartContainer.appendChild(cartItem);
+        });
     }
+
+    // Calcular el total del carrito
+    const cartTotal = cartItems.reduce((total, item) => total + (parseFloat(item.price.replace("L.", "")) * item.quantity), 0);
+    document.querySelector("#cart-total-amount").textContent = `L. ${cartTotal.toFixed(2)}`;
+}
 
     function removeFromCart(event) {
         const button = event.target;
