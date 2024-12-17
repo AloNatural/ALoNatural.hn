@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alo Natural</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../public/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../public/assets/img/favicon.ico" type="image/x-icon">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="../../public/assets/css/main.css" />
+    <link rel="stylesheet" href="../../public/assets/css/utilities.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <style>
+.Checkout {
+         
+            max-width: 700px;
+            margin: auto;
+            
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+       .pedido {
+        margin-bottom: 20px;
+        font-size: 15px;
+        }
+       .pedido h2 {
+        text-align: center;
+        font-size: 20px;
+       }
+      .pedido-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    .pedido-item img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .pedido-item .info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .pedido-item .info p {
+        margin: 3px 0;
+        font-size: 14px;
+    }
+    .pedido-item .info p strong {
+        font-size: 15px;
+    }
+    .pedido-total {
+        text-align: right;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+    }
+        .formulario label {
+            display: block;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .formulario input, .formulario select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: #218838;
+            color:white;
+
+        }
+    </style>
+        <div class="hero">
+            <h2>Pedidos a Domicilio (9308-545450) 🇭🇳</h2>
+        </div>
+        <div class="page-wrapper">
+            <!-- header -->
+            <header style="margin-top: -35px;" class="header">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-content d-flex justify-content-between align-items-center">
+                            <div class="brand-and-toggler d-flex align-items-center justify-content-between">
+                                <img style="width: 180px;" src="../../public/assets/img/Logotipo.png" alt="">
+                                <button type="button" class="d-none navbar-show-btn">
+                                    <i class="fas fa-bars"></i>
+                                </button>
+                            </div>
+
+                            <div class="navbar-box">
+                                <button type="button" class="navbar-hide-btn">
+                                    <i class="fas fa-times"></i>
+                                </button>
+
+                                <ul class="navbar-nav d-flex align-items-center">
+                                    <li class="nav-item">
+                                        <a href="index.html" class="nav-link text-white text-nowrap">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a style="color: green;" href="#" class="nav-link text-white nav-active text-nowrap">Suplementos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a style="color: green;" href="#" class="nav-link text-white text-nowrap">Promociones</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a style="color: green;" href="#" class="nav-link text-white text-nowrap">Contactanos</a>
+                                    </li>
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a href="https://www.tiktok.com/@alonaturalhn" class="icon-container">
+                                                <i class="fab fa-tiktok"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a href="https://www.instagram.com/alonatural2024/" class="icon-container">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a href="https://www.facebook.com/people/Alo-Natural/61559264882892/" class="icon-container">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <main>
+                        <br><br>
+
+                      <!-- Checkout-->
+     <div class="Checkout">
+        <!-- Resumen del Pedido -->
+        <div class="pedido">
+            <h2>Resumen del Pedido</h2>
+            <ul id="pedido-lista">
+                <!-- Aquí se insertarán los productos dinámicamente -->
+            </ul>
+            <p><strong>Total: </strong><span id="total-amount">L.0.00</span></p>
+        </div>
+
+        <!-- Formulario de Checkout -->
+        <div class="formulario">
+            <h2>Datos de Envío</h2>
+            <form id="checkout-form">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+
+                <label for="pais">País:</label>
+                <select id="pais" name="pais" required>
+                    <option value="">Seleccionar País</option>
+                    <option value="HN">Honduras</option>
+                </select>
+
+                <label for="codigo-postal">Código Postal:</label>
+                <input type="text" id="codigo-postal" name="codigo-postal" required>
+
+                <button type="submit" class="btn">Finalizar Pedido</button>
+                <button type="submit" class="btn">Cancelar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+            const pedidoLista = document.getElementById('pedido-lista');
+            const totalAmount = document.getElementById('total-amount');
+            
+            let total = 0;
+
+            if (cart.length === 0) {
+                pedidoLista.innerHTML = '<p>No hay productos en el carrito.</p>';
+                return;
+            }
+
+            cart.forEach(item => {
+                const div = document.createElement('div');
+                div.classList.add('pedido-item');
+                div.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="info">
+                        <p><strong>${item.name}</strong></p>
+                        <p>Precio: L.${item.price.toFixed(2)}</p>
+                        <p>Cantidad: ${item.quantity}</p>
+                        <p>Subtotal: <strong>L.${(item.price * item.quantity).toFixed(2)}</strong></p>
+                    </div>
+                `;
+                pedidoLista.appendChild(div);
+                total += item.price * item.quantity;
+            });
+
+            totalAmount.textContent = `L.${total.toFixed(2)}`;
+        });
+
+        // Manejar el envío del formulario
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const direccion = document.getElementById('direccion').value;
+            const ciudad = document.getElementById('ciudad').value;
+            const pais = document.getElementById('pais').value;
+            const codigoPostal = document.getElementById('codigo-postal').value;
+
+            alert(`¡Gracias, ${nombre}! Tu pedido será enviado a la dirección: ${direccion}, ${ciudad}, ${pais}. \nTe contactaremos a ${email}.`);
+        });
+    </script>
+                        
+                    </main>
+    
+
+        <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+        <!-- Owl Carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Custom JS -->
+        <script src="../../public/assets/js/script.js"></script>
+
+    </body>
+
+</html>
