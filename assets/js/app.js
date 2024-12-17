@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const productsContainer = document.querySelector(".container-products");
     const cartCount = document.querySelector(".cart-count");
 
+    // Función para cambiar los productos según la categoría seleccionada
     function changeProducts(category) {
         productsContainer.innerHTML = ""; // Limpiar el contenedor
         const products = getProductosPorCategoria(category); // Obtener productos de la categoría
@@ -12,11 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Listener para cambiar productos al seleccionar una categoría
     productFilter.addEventListener("change", function () {
         const selectedCategory = this.value; // Obtener la categoría seleccionada
         changeProducts(selectedCategory); // Llamar a la función para actualizar los productos
     });
 
+    // Función de búsqueda de productos
     function searchProducts() {
         const query = document.getElementById("searchInput").value.toLowerCase();
         const products = document.querySelectorAll(".product-card");
@@ -26,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Función para obtener productos por categoría
     function getProductosPorCategoria(category) {
         switch (category) {
             case "Nervioso":
@@ -87,7 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     {name: "Cálcio + Vitaminas", price:"L284.00", image: "assets/images/Tienda/C4lci0+V1t.png"},
                     {name: "Glucosamina 300 mg 90 cápsulas", price:"L255.00", image: "assets/images/Tienda/Gluc0s4m1n4.png"},
                     {name: "Calcior D3", price:"L0.00", image: "assets/images/Tienda/C4lci0r 0 D3.png"},
-                    {name: "Exfortius 20 Tabletas", price:"L209.00", image: "assets/images/Tienda/3xf0r73us.png"},
+                    {name: "Ácido Hialurónico", price:"L.0.00", image: "assets/images/Tienda/4cido H14luron1c0.png"},
+                    {name: "Ácido Hialurónico + MSM", price:"L.0.00", image: "assets/images/Tienda/4cido H14luron1c0 0 MSM.png"},
+                    {name: "Collagen", price:"L0.00", image: "assets/images/Tienda/Coll4g3n.png"},
+                    {name: "Collagen + HA", price:"L0.00", image: "assets/images/Tienda/Coll4g3n+HA.png"},
                 ];
 
             default:
@@ -95,160 +102,64 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-function createProductCard(product) {
-        if (!product.name || !product.price || !product.image) {
-            console.warn("Producto inválido:", product);
-            return null; // Salta productos inválidos
-        }
-
+    // Función para crear tarjeta del producto
+    function createProductCard(product) {
         const card = document.createElement("div");
-        card.className = "product-card";
+        card.classList.add("product-card");
         card.innerHTML = `
-            <div class="container-img">
-                <img src="${product.image}" alt="${product.name}" style="width: 250px; height: 250px; object-fit: cover;">
-            </div>
-            <div class="content-card-product">
-                <h3>${product.name}</h3>
-                <p class="price">${product.price}</p>
-                <button 
-                    class="btn-add-cart" 
-                    data-name="${product.name}" 
-                    data-price="${product.price}" 
-                    data-image="${product.image}">
-                    Añadir al carrito
-                </button>
-            </div>
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>${product.price}</p>
+            <button class="add-to-cart" onclick="addToCart('${product.name}', '${product.price}')">Agregar al carrito</button>
         `;
-
-        const addToCartButton = card.querySelector(".btn-add-cart");
-        addToCartButton.addEventListener("click", addToCart);
-
         return card;
     }
 
-    let cartItems = [];
-
-    function addToCart(event) {
-        const button = event.target;
-        const name = button.getAttribute("data-name");
-        const price = button.getAttribute("data-price");
-        const image = button.getAttribute("data-image");
-
-        let item = cartItems.find(i => i.name === name);
-        if (item) {
-            item.quantity += 1;
+    // Función para agregar productos al carrito
+    window.addToCart = function (name, price) {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const existingProduct = cart.find(item => item.name === name);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
         } else {
-            item = { name, price, image, quantity: 1 };
-            cartItems.push(item);
+            cart.push({ name, price, quantity: 1 });
         }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+    };
 
-        saveCart();
-        updateCart();
-        updateCartCount(); // Actualizar número de productos en el ícono del carrito
+    // Función para actualizar el contador del carrito
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cartCount.textContent = cart.length;
     }
 
-  function updateCart() {
-    const cartContainer = document.querySelector("#cart-items");
-    cartContainer.innerHTML = "";
-
-    if (cartItems.length === 0) {
-        cartContainer.innerHTML = "<p>No hay productos en el carrito.</p>";
-    } else {
-        cartItems.forEach(item => {
+    // Función para mostrar productos del carrito
+    window.showCart = function () {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartContainer = document.querySelector(".cart-container");
+        cartContainer.innerHTML = "";
+        cart.forEach(item => {
             const cartItem = document.createElement("div");
-            cartItem.className = "cart-item d-flex align-items-center justify-content-between p-3 mb-2";
-            cartItem.style.border = "1px solid #ddd";
-            cartItem.style.borderRadius = "8px";
-            cartItem.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.1)";
-            cartItem.style.backgroundColor = "#f9f9f9";
-
-            // Validar precio
-            const price = parseFloat(item.price.replace("L.", "")) || 0; // Corregir NaN si el precio es inválido
-            const totalItemPrice = (price * item.quantity).toFixed(2);
-
+            cartItem.classList.add("cart-item");
             cartItem.innerHTML = `
-                <div class="cart-item-image" style="flex: 0 0 80px;">
-                    <img src="${item.image}" alt="${item.name}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
-                </div>
-                <div class="cart-item-details" style="flex: 1; margin-left: 15px;">
-                    <h5 style="margin: 0; font-size: 1rem; font-weight: bold;">${item.name}</h5>
-                    <p style="margin: 5px 0; font-size: 0.9rem; color: #555;">Cantidad: <strong>${item.quantity}</strong></p>
-                    <p style="margin: 5px 0; font-size: 0.9rem; color: #555;">Precio: <strong>L. ${totalItemPrice}</strong></p>
-                </div>
-                <div class="cart-item-actions" style="flex: 0 0 80px; text-align: center;">
-                    <button class="remove-cart btn btn-danger btn-sm" 
-                            data-name="${item.name}" 
-                            style="font-size: 0.8rem; padding: 5px 8px;">
-                        Eliminar
-                    </button>
-                </div>
+                <h3>${item.name}</h3>
+                <p>${item.price}</p>
+                <p>Cantidad: ${item.quantity}</p>
             `;
-
-            const removeButton = cartItem.querySelector(".remove-cart");
-            removeButton.addEventListener("click", removeFromCart);
-
             cartContainer.appendChild(cartItem);
         });
+        calculateTotal();
+    };
+
+    // Función para calcular el total del carrito
+    function calculateTotal() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const total = cart.reduce((sum, item) => sum + parseFloat(item.price.replace("L.", "")) * item.quantity, 0);
+        const totalContainer = document.querySelector(".total");
+        totalContainer.textContent = `Total: L.${total.toFixed(2)}`;
     }
 
-    // Calcular el total del carrito
-    const cartTotal = cartItems.reduce((total, item) => {
-        const price = parseFloat(item.price.replace("L.", "")) || 0; // Verificar precios vacíos o inválidos
-        return total + (price * item.quantity);
-    }, 0);
-
-    document.querySelector("#cart-total-amount").textContent = `L. ${cartTotal.toFixed(2)}`;
-}
-
-
-    function removeFromCart(event) {
-        const button = event.target;
-        const name = button.getAttribute("data-name");
-
-        cartItems = cartItems.filter(item => item.name !== name);
-
-        saveCart();
-        updateCart();
-        updateCartCount(); // Actualizar número de productos en el ícono del carrito
-    }
-
-    function saveCart() {
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    }
-
-    function loadCart() {
-        const storedCart = localStorage.getItem("cartItems");
-        if (storedCart) {
-            cartItems = JSON.parse(storedCart);
-            updateCart();
-        }
-    }
-
-    loadCart();
-
-    // Abrir y cerrar el modal del carrito
-    const cartBtn = document.getElementById("cart-btn");
-    const cartModal = document.getElementById("cart-modal");
-    const closeBtn = document.querySelector(".close-btn");
-
-    cartBtn.addEventListener("click", () => {
-        cartModal.style.display = "block";
-    });
-
-    closeBtn.addEventListener("click", () => {
-        cartModal.style.display = "none";
-    });
-
-    // También cerrar cuando se haga clic fuera del modal
-    window.addEventListener("click", function(event) {
-        if (event.target === cartModal) {
-            cartModal.style.display = "none";
-        }
-    });
-
-    function updateCartCount() {
-        cartCount.textContent = cartItems.length; // Actualiza el contador del carrito
-    }
-
-    updateCartCount(); // Inicialmente, mostrar la cantidad correcta de productos en el ícono del carrito
+    // Llamar a la función para actualizar el contador al cargar la página
+    updateCartCount();
 });
