@@ -144,31 +144,30 @@
                         </div>
                     </div>
 
-			<script>
-                       // Abrir y cerrar el modal del carrito
-const cartBtn = document.getElementById("cart-btn");
-const cartModal = document.getElementById("cart-modal");
-const closeBtn = document.querySelector(".close-btn");
+		 <script>
+                  // Abrir y cerrar el modal del carrito
+                   const cartBtn = document.getElementById("cart-btn");
+                   const cartModal = document.getElementById("cart-modal");
+                   const closeBtn = document.querySelector(".close-btn");
 
-cartBtn.addEventListener("click", () => {
-    cartModal.style.display = "block";
-});
+                   cartBtn.addEventListener("click", () => {
+                   cartModal.style.display = "block";
+                   });
 
-closeBtn.addEventListener("click", () => {
-    cartModal.style.display = "none";
-});
+                   closeBtn.addEventListener("click", () => {
+                   cartModal.style.display = "none";
+                 });
 
-// También cerrar cuando se haga clic fuera del modal
-window.addEventListener("click", function(event) {
-    if (event.target === cartModal) {
-        cartModal.style.display = "none";
-    }
-});
-
+                 // También cerrar cuando se haga clic fuera del modal
+                 window.addEventListener("click", function(event) {
+                 if (event.target === cartModal) {
+                   cartModal.style.display = "none";
+                   }
+                 });
                     </script>
 
 	 <style> 
-		.cart-item {
+.cart-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -470,6 +469,7 @@ window.addEventListener("click", function(event) {
 	color: #777;
 	margin-left: 0.5rem;
 }
+	
 </style>
 
 <style>
@@ -527,10 +527,19 @@ window.addEventListener("click", function(event) {
                         </div>
                        
                         <!-- Campo de búsqueda -->
-                    <input type="text" id="searchInput" placeholder="Buscar productos..." onkeyup="searchProducts()">
+                       <input type="text" id="searchInput" placeholder="Buscar productos..." onkeyup="searchProducts()">
+			    
+			     <div class="container-products">
+                            <!-- Aquí se encontrarán los productos filtrados -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
                     <style>
                         /* Estilos personalizados para el campo de búsqueda */
-
     .product-filter,
 #searchInput {
     width: 100%; /* Asegura que ambos elementos ocupen el 100% del contenedor padre */
@@ -563,17 +572,6 @@ window.addEventListener("click", function(event) {
     background-color: #fff;
 }
                     </style>
-
-                    
-                        <div class="container-products">
-                            <!-- Aquí se encontrarán los productos filtrados -->
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <style>
     .search-container {
